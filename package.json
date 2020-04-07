@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "client": "cd client && npm start",
-    "build": "cd client && npm run build",
+    "build": "cd client && npm run build && npm run build-storybook",
+    "storybook": "cd client && npx run storybook",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "dev:server": "npm run build && cd .. && npm start",
     "server": "nodemon index.js",
