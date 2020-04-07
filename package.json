@@ -1,0 +1,19 @@
+{
+  "name": "stayfocused",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuleFloorson/stayfocused.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuleFloorson/stayfocused/issues"
+  },
+  "homepage": "https://github.com/JuleFloorson/stayfocused#readme"
+}
