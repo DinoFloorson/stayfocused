@@ -1,11 +1,11 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import PrimaryButton from '../components/PrimaryButton';
+import SignInButton from '../components/SignInButton';
 
 export default {
   title: 'Button',
 };
 
 export const LetsGoButton = () => (
-  <PrimaryButton onClick={action('clicked')}>Lets go!</PrimaryButton>
+  <SignInButton onClick={action('clicked')}>Lets go!</SignInButton>
 );
