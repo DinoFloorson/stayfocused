@@ -9,6 +9,7 @@ const Form = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   box-shadow: 0px 10px 30px #000000;
 `;
 
