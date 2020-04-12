@@ -5,5 +5,6 @@ const SignInWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin: 10px;
 `;
 export default SignInWrapper;

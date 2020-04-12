@@ -12,8 +12,9 @@ export const SignInFields = () => (
     <SignInWrapper>
       <SignInText>Email:</SignInText>
       <EmailInput />
+    </SignInWrapper>
+    <SignInWrapper>
       <SignInText>Password:</SignInText>
-
       <PasswordInput />
     </SignInWrapper>
   </>

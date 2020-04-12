@@ -5,7 +5,7 @@ const PrimaryButton = styled.button`
   color: white;
   font-size: 20px;
   font-family: Roboto;
-  font-weight: 300;
+  font-weight: 400;
 `;
 
 export default PrimaryButton;
