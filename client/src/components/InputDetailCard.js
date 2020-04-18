@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 import GlobalStyles from './GlobalStyles';
 import MethodButton from './MethodButton';
-// import CategoryButton from './CategoryButton';
+import CategoryButton from './CategoryButton';
 
 const Card = styled.div`
   width: 343px;
@@ -12,7 +12,7 @@ const Card = styled.div`
   color: white;
   display: grid;
   grid-template-rows: 10% 8% 8% 8% auto 10%;
-  grid-template-columns: 15% 15% auto 15% 15%;
+  grid-template-columns: 15% 15% auto 15% 7%;
   align-items: center;
 `;
 
@@ -36,7 +36,10 @@ const SubHeading = styled.h2`
 `;
 
 const CategoryWrapper = styled.div`
-  grid-column: 3/6;
+  grid-column: 3/5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 const Date = styled.input`
@@ -44,21 +47,51 @@ const Date = styled.input`
   grid-column: 3/6;
   width: 130px;
   height: 25px;
+  border: 1px solid #011e62;
+  ::-webkit-datetime-edit-fields-wrapper {
+    border-color: #011e62;
+  }
+  ::-webkit-datetime-edit {
+    padding: 1em;
+  }
+  ::-webkit-inner-spin-button {
+    display: none;
+  }
+  ::-webkit-calendar-picker-indicator {
+    background: #011e62;
+    color: white;
+  }
 `;
 
 const StartTime = styled.input`
   color: #011e62;
   grid-column: 3/4;
+  grid-row: 4/5;
   width: 80px;
   height: 25px;
+  border: 1px solid #011e62;
+  ::-webkit-datetime-edit {
+    padding: 1em;
+  }
+  ::-webkit-inner-spin-button {
+    display: none;
+  }
 `;
 
 const EndTime = styled.input`
   color: #011e62;
-  grid-column: 4/6;
+  grid-column: 3/5;
   grid-row: 4/5;
+  justify-self: end;
   width: 80px;
   height: 25px;
+  border: 1px solid #011e62;
+  ::-webkit-datetime-edit {
+    padding: 1em;
+  }
+  ::-webkit-inner-spin-button {
+    display: none;
+  }
 `;
 
 const SaveButton = styled(MethodButton)`
@@ -79,12 +112,19 @@ function DetailCard() {
       <Card>
         <Heading type="text" />
         <SubHeading>Category:</SubHeading>
-        <CategoryWrapper></CategoryWrapper>
+        <CategoryWrapper>
+          <CategoryButton>SWIM</CategoryButton>
+          <CategoryButton>BIKE</CategoryButton>
+          <CategoryButton>RUN</CategoryButton>
+          <CategoryButton>STR</CategoryButton>
+          <CategoryButton>STA</CategoryButton>
+        </CategoryWrapper>
+
         <SubHeading>Date:</SubHeading>
         <Date type="date" />
         <SubHeading>Time:</SubHeading>
         <StartTime type="time" />
-        <p>to</p>
+        <span>to</span>
         <EndTime type="time" />
         <SaveButton>Save</SaveButton>
         <DiscardButton>Discard</DiscardButton>

@@ -9,6 +9,10 @@ const SecondaryButton = styled.button`
   text-align: center;
   padding: 0px;
   border-radius: 3px;
+  &:active {
+    background-color: #011e62;
+    color: white;
+  }
 `;
 
 export default SecondaryButton;
