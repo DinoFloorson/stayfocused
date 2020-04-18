@@ -43,12 +43,14 @@ const Date = styled.input`
   color: #011e62;
   grid-column: 3/6;
   width: 130px;
+  height: 25px;
 `;
 
 const StartTime = styled.input`
   color: #011e62;
   grid-column: 3/4;
   width: 80px;
+  height: 25px;
 `;
 
 const EndTime = styled.input`
@@ -56,6 +58,7 @@ const EndTime = styled.input`
   grid-column: 4/6;
   grid-row: 4/5;
   width: 80px;
+  height: 25px;
 `;
 
 const SaveButton = styled(MethodButton)`
