@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import GlobalStyles from './GlobalStyles';
+import Bin from '../assets/bin.svg';
+import Pen from '../assets/pen.svg';
+import MethodButton from './MethodButton';
 
 const Card = styled.div`
   width: 343px;
@@ -8,8 +11,10 @@ const Card = styled.div`
   border-radius: 10px 10px 10px 10px;
   border: 3px solid #b9b9b9;
   color: white;
-  display: flex;
-  flex: column wrap;
+  display: grid;
+  grid-template-rows: 10% 8% 8% 8% auto 10%;
+  grid-template-columns: 30% auto 10% 10%;
+  align-items: center;
 `;
 
 const Heading = styled.h1`
@@ -17,38 +22,46 @@ const Heading = styled.h1`
   font-size: 1.25rem;
   font-weight: 400;
   color: #011e62;
-  padding: 15px 0px 10px 15px;
-  margin: 0px;
-  flex-basis: 100%;
-  height: 100px;
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 10px 0px 10px 15px;
-  flex: 0 0 20%;
+  grid-column: 1/3;
+  padding-left: 15px;
 `;
 
 const SubHeading = styled.h2`
   font-size: 1.125rem;
   color: #011e62;
   font-weight: 400;
-  margin: 0px;
-  flex-basis: 20%;
+  grid-column: 1/2;
+  align-items: center;
+  padding-left: 15px;
 `;
 
-const CategoryLabel = styled.div`
+const CategoryLabel = styled.p`
   background-color: #011e62;
   color: white;
-  font-size: 10px;
-  padding: 5px 1px 2px 1px;
+  font-size: 0.625rem;
+  width: 30px;
+  padding: 2px;
   font-family: Roboto;
   border: 2px solid #011e62;
-  padding: 0px;
   border-radius: 3px;
   text-align: center;
+`;
+const CategoryWrapper = styled.div`
+  grid-column: 2/5;
+`;
+
+const Date = styled.p`
+  color: #011e62;
+`;
+
+const Time = styled.p`
+  color: #011e62;
+`;
+
+const CloseButton = styled(MethodButton)`
+  grid-row: 6/7;
+  grid-column: 1/5;
+  justify-self: center;
 `;
 
 function DetailCard() {
@@ -57,16 +70,18 @@ function DetailCard() {
       <GlobalStyles />
       <Card>
         <Heading>Technic/GA1</Heading>
-        <Wrapper>
-          <SubHeading>Category:</SubHeading>
+        <img src={Pen} />
+        <img src={Bin} />
+        <SubHeading>Category:</SubHeading>
+        <CategoryWrapper>
           <CategoryLabel>SWIM</CategoryLabel>
-        </Wrapper>
-        <Wrapper>
-          <SubHeading>Date:</SubHeading>
-        </Wrapper>
-        <Wrapper>
-          <SubHeading>Time:</SubHeading>
-        </Wrapper>
+        </CategoryWrapper>
+
+        <SubHeading>Date:</SubHeading>
+        <Date>06.11.2020</Date>
+        <SubHeading>Time:</SubHeading>
+        <Time> 08:00 to 09:00</Time>
+        <CloseButton>Close</CloseButton>
       </Card>
     </>
   );
