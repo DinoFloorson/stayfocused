@@ -5,10 +5,8 @@ export default {
   title: 'Task',
 };
 
-export const NewTaskLine = () => {
-  return (
-    <>
-      <Taskline></Taskline>
-    </>
-  );
-};
+export const NewTaskLine = () => (
+  <>
+    <Taskline></Taskline>
+  </>
+);
