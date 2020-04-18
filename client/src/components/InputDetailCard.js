@@ -39,14 +39,23 @@ const CategoryWrapper = styled.div`
   grid-column: 3/6;
 `;
 
-const Date = styled.p`
+const Date = styled.input`
   color: #011e62;
   grid-column: 3/6;
+  width: 130px;
 `;
 
-const Time = styled.p`
+const StartTime = styled.input`
   color: #011e62;
-  grid-column: 3/6;
+  grid-column: 3/4;
+  width: 80px;
+`;
+
+const EndTime = styled.input`
+  color: #011e62;
+  grid-column: 4/6;
+  grid-row: 4/5;
+  width: 80px;
 `;
 
 const SaveButton = styled(MethodButton)`
@@ -65,13 +74,15 @@ function DetailCard() {
     <>
       <GlobalStyles />
       <Card>
-        <Heading />
+        <Heading type="text" />
         <SubHeading>Category:</SubHeading>
         <CategoryWrapper></CategoryWrapper>
         <SubHeading>Date:</SubHeading>
-        <Date>06.11.2020</Date>
+        <Date type="date" />
         <SubHeading>Time:</SubHeading>
-        <Time> 08:00 to 09:00</Time>
+        <StartTime type="time" />
+        <p>to</p>
+        <EndTime type="time" />
         <SaveButton>Save</SaveButton>
         <DiscardButton>Discard</DiscardButton>
       </Card>
