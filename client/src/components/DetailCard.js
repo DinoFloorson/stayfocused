@@ -41,7 +41,6 @@ const CategoryLabel = styled.p`
   font-size: 0.625rem;
   width: 30px;
   padding: 2px;
-  font-family: Roboto;
   border: 2px solid #011e62;
   border-radius: 3px;
   text-align: center;

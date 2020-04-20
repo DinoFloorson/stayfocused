@@ -26,7 +26,6 @@ const DirectionButton = styled.button`
 `;
 
 const DayText = styled.p`
-  font-family: Roboto;
   font-size: 15px;
   color: white;
 `;

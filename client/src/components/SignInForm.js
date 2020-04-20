@@ -31,7 +31,6 @@ const InputWrapper = styled.div`
 `;
 
 const Text = styled.p`
-  font-family: Roboto;
   font-size: 13px;
   color: white;
 `;
