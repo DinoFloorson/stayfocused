@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
+import colors from '../utils/colors';
 
 const PrimaryButton = styled.button`
-  background-color: #011e62;
-  color: white;
   font-size: 1.25rem;
   font-weight: 400;
+  background-color: ${colors.primaryColor};
+  color: white;
 `;
 
 export default PrimaryButton;

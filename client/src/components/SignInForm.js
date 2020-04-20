@@ -1,13 +1,14 @@
 import styled from '@emotion/styled';
 import PrimaryButton from './PrimaryButton';
 import React from 'react';
+import colors from '../utils/colors';
 
 const Form = styled.div`
   width: 305px;
   height: 510px;
   border-radius: 30px 0px 0px 30px;
   background-image: linear-gradient(#011e62, #026adb);
-  color: white;
+  color: ${colors.secondaryColor};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +19,6 @@ const Form = styled.div`
 const Heading = styled.p`
   font-weight: 400;
   font-size: 1.6rem;
-  color: white;
 `;
 
 const InputWrapper = styled.div`
@@ -31,17 +31,16 @@ const InputWrapper = styled.div`
 
 const Text = styled.p`
   font-size: 0.8rem;
-  color: white;
 `;
 
 const Input = styled.input`
   width: 230px;
   height: 38px;
-  border: 1px solid #011e62;
   font-size: 1.25rem;
-  padding-left: 8px;
-  color: #011e62;
+  color: ${colors.primaryColor};
+  border: 1px solid ${colors.primaryColor};
   border-radius: 13px;
+  padding-left: 8px;
 `;
 
 const CheckboxField = styled.div`
