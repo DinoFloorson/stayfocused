@@ -4,12 +4,13 @@ import GlobalStyles from './GlobalStyles';
 import Bin from '../assets/bin.svg';
 import Pen from '../assets/pen.svg';
 import MethodButton from './MethodButton';
+import colors from '../utils/colors';
 
 const Card = styled.div`
   width: 343px;
   height: 570px;
   border-radius: 10px 10px 10px 10px;
-  border: 3px solid #b9b9b9;
+  border: 3px solid ${colors.cardBorder};
   color: white;
   display: grid;
   grid-template-rows: 10% 8% 8% 8% auto 10%;
@@ -21,14 +22,14 @@ const Heading = styled.h1`
   text-align: left;
   font-size: 1.25rem;
   font-weight: 400;
-  color: #011e62;
+  color: ${colors.primaryText};
   grid-column: 1/3;
   padding-left: 15px;
 `;
 
 const SubHeading = styled.h2`
   font-size: 1.125rem;
-  color: #011e62;
+  color: ${colors.primaryText};
   font-weight: 400;
   grid-column: 1/2;
   align-items: center;
@@ -36,7 +37,7 @@ const SubHeading = styled.h2`
 `;
 
 const CategoryLabel = styled.p`
-  background-color: #011e62;
+  background-color: ${colors.secondaryBackground};
   color: white;
   font-size: 0.625rem;
   width: 30px;

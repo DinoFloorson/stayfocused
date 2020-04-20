@@ -2,11 +2,12 @@ import styled from '@emotion/styled';
 import ArrowLeft from '../assets/arrowleft.svg';
 import ArrowRight from '../assets/arrowright.svg';
 import React from 'react';
+import colors from '../utils/colors';
 
 const Form = styled.div`
   width: 375px;
   height: 50px;
-  background-color: #011e62;
+  background-color: ${colors.primaryBackground};
   color: white;
   border-radius: 20px;
   display: flex;
@@ -16,7 +17,7 @@ const Form = styled.div`
 `;
 
 const DirectionButton = styled.button`
-  background-color: #011e62;
+  background-color: ${colors.primaryBackground};
   border: none;
   outline: none;
   height: 20px;
@@ -36,10 +37,10 @@ const DayButton = styled.button`
   justify-content: center;
   height: 20px;
   border: none;
-  background-color: #011e62;
+  background-color: ${colors.primaryBackground};
   outline: none;
   &:active {
-    background-color: #ffffff41;
+    background-color: ${colors.buttonClick};
     border-radius: 13px;
   }
 `;
