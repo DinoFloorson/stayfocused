@@ -57,7 +57,7 @@ function Calendar() {
     <>
       <Bar>
         <DirectionButton>
-          <img src={ArrowLeft} />
+          <img src={ArrowLeft} alt="Arrow left" />
         </DirectionButton>
         <DayButton>
           <DayText>Mon</DayText>
@@ -88,7 +88,7 @@ function Calendar() {
           <Date>11.04.</Date>
         </DayButton>
         <DirectionButton>
-          <img src={ArrowRight} />
+          <img src={ArrowRight} alt="Arrow right" />
         </DirectionButton>
       </Bar>
     </>

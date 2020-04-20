@@ -20,7 +20,7 @@ function AddButton() {
   return (
     <>
       <Button>
-        <img src={Plus} />
+        <img src={Plus} alt="plus" />
       </Button>
     </>
   );
