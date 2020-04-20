@@ -6,8 +6,8 @@ import colors from '../utils/colors';
 
 const Bar = styled.div`
   height: 50px;
-  background-color: ${colors.primaryBackground};
-  color: white;
+  background-color: ${colors.primaryColor};
+  color: ${colors.secondaryColor};
   border-radius: 20px;
   display: flex;
   flex-direction: row;
@@ -16,17 +16,16 @@ const Bar = styled.div`
 `;
 
 const DirectionButton = styled.button`
-  background-color: ${colors.primaryBackground};
+  background-color: ${colors.primaryColor};
   border: none;
   outline: none;
   height: 20px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 0px 5px 0px 5px;
 `;
 
 const DayText = styled.p`
   font-size: 0.937rem;
-  color: white;
+  color: ${colors.secondaryColor};
   margin: 0px;
   padding: 3px;
 `;
@@ -35,9 +34,9 @@ const DayButton = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 20px;
+  height: 100%;
   border: none;
-  background-color: ${colors.primaryBackground};
+  background-color: ${colors.primaryColor};
   outline: none;
   &:active {
     background-color: ${colors.buttonClick};
@@ -49,7 +48,7 @@ const Date = styled.div`
   font-size: 0.625rem;
   margin: 0px;
   padding: 3px;
-  color: ${colors.primaryText};
+  color: ${colors.secondaryColor};
   font-weight: 200;
 `;
 

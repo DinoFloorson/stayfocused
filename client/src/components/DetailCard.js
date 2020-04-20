@@ -10,7 +10,7 @@ const Card = styled.div`
   height: 570px;
   border-radius: 10px 10px 10px 10px;
   border: 3px solid ${colors.cardBorder};
-  color: white;
+  color: ${colors.secondaryText};
   display: grid;
   grid-template-rows: 10% 8% 8% 8% auto 10%;
   grid-template-columns: 30% auto 10% 10%;
@@ -21,14 +21,12 @@ const Heading = styled.h1`
   text-align: left;
   font-size: 1.25rem;
   font-weight: 400;
-  color: ${colors.primaryText};
   grid-column: 1/3;
   padding-left: 15px;
 `;
 
 const SubHeading = styled.h2`
   font-size: 1.125rem;
-  color: ${colors.primaryText};
   font-weight: 400;
   grid-column: 1/2;
   align-items: center;
@@ -36,12 +34,12 @@ const SubHeading = styled.h2`
 `;
 
 const CategoryLabel = styled.p`
-  background-color: ${colors.secondaryBackground};
+  background-color: ${colors.primaryBackground};
   color: white;
   font-size: 0.625rem;
-  width: 30px;
+  width: 35px;
   padding: 2px;
-  border: 2px solid #011e62;
+  border: 2px solid ${colors.primaryBackground};
   border-radius: 3px;
   text-align: center;
 `;
