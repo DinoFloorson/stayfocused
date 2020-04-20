@@ -6,10 +6,6 @@ const PrimaryButton = styled.button`
   font-size: 20px;
   font-family: Roboto;
   font-weight: 400;
-  &:active {
-    background-color: #011e62;
-    color: white;
-  }
 `;
 
 export default PrimaryButton;
