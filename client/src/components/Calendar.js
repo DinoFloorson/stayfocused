@@ -4,7 +4,7 @@ import ArrowRight from '../assets/arrowright.svg';
 import React from 'react';
 import colors from '../utils/colors';
 
-const Form = styled.div`
+const Bar = styled.div`
   width: 375px;
   height: 50px;
   background-color: ${colors.primaryBackground};
@@ -48,7 +48,7 @@ const DayButton = styled.button`
 function Calendar() {
   return (
     <>
-      <Form>
+      <Bar>
         <DirectionButton>
           <img src={ArrowLeft} />
         </DirectionButton>
@@ -76,7 +76,7 @@ function Calendar() {
         <DirectionButton>
           <img src={ArrowRight} />
         </DirectionButton>
-      </Form>
+      </Bar>
     </>
   );
 }

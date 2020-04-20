@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import GlobalStyles from './GlobalStyles';
 import Dot from '../assets/dot.svg';
 import CategoryButton from './CategoryButton';
 
@@ -36,7 +35,6 @@ const TaskHeading = styled.h2`
 function TaskLine() {
   return (
     <>
-      <GlobalStyles />
       <Task>
         <img src={Dot} />
         <Time>08:00 - 09:00</Time>

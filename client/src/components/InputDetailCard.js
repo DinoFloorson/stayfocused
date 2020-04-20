@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import GlobalStyles from './GlobalStyles';
 import MethodButton from './MethodButton';
 import CategoryButton from './CategoryButton';
 
@@ -108,7 +107,6 @@ const DiscardButton = styled(MethodButton)`
 function DetailCard() {
   return (
     <>
-      <GlobalStyles />
       <Card>
         <Heading type="text" />
         <SubHeading>Category:</SubHeading>

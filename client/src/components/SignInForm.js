@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import PrimaryButton from './PrimaryButton';
 import React from 'react';
-import GlobalStyles from './GlobalStyles';
 
 const Form = styled.div`
   width: 305px;
@@ -67,7 +66,6 @@ const LetsGoButton = styled(PrimaryButton)`
 function SignInForm() {
   return (
     <>
-      <GlobalStyles />
       <Form>
         <Heading>Welcome back!</Heading>
         <InputWrapper>

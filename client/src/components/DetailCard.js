@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import GlobalStyles from './GlobalStyles';
 import Bin from '../assets/bin.svg';
 import Pen from '../assets/pen.svg';
 import MethodButton from './MethodButton';
@@ -68,7 +67,6 @@ const CloseButton = styled(MethodButton)`
 function DetailCard() {
   return (
     <>
-      <GlobalStyles />
       <Card>
         <Heading>Technic/GA1</Heading>
         <img src={Pen} />
