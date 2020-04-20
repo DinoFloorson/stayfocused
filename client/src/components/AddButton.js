@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 
 const Button = styled(PrimaryButton)`
   font-size: 2.5rem;
-  padding: 20px 10px 20px 10px;
+  padding: 20px 8px 20px 8px;
   border-radius: 20px;
   border: none;
   text-align: center;

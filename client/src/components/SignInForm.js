@@ -16,14 +16,13 @@ const Form = styled.div`
 `;
 
 const Heading = styled.p`
-  font-family: Roboto;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 1.6rem;
   color: white;
 `;
 
 const InputWrapper = styled.div`
-  font-size: 13px;
+  font-size: 0.8rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -31,7 +30,7 @@ const InputWrapper = styled.div`
 `;
 
 const Text = styled.p`
-  font-size: 13px;
+  font-size: 0.8rem;
   color: white;
 `;
 
@@ -39,7 +38,7 @@ const Input = styled.input`
   width: 230px;
   height: 38px;
   border: 1px solid #011e62;
-  font-size: 20px;
+  font-size: 1.25rem;
   padding-left: 8px;
   color: #011e62;
   border-radius: 13px;

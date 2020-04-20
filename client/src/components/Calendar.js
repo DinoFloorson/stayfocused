@@ -5,7 +5,6 @@ import React from 'react';
 import colors from '../utils/colors';
 
 const Bar = styled.div`
-  width: 375px;
   height: 50px;
   background-color: ${colors.primaryBackground};
   color: white;
@@ -26,8 +25,10 @@ const DirectionButton = styled.button`
 `;
 
 const DayText = styled.p`
-  font-size: 15px;
+  font-size: 0.937rem;
   color: white;
+  margin: 0px;
+  padding: 3px;
 `;
 
 const DayButton = styled.button`
@@ -44,6 +45,14 @@ const DayButton = styled.button`
   }
 `;
 
+const Date = styled.div`
+  font-size: 0.625rem;
+  margin: 0px;
+  padding: 3px;
+  color: ${colors.primaryText};
+  font-weight: 200;
+`;
+
 function Calendar() {
   return (
     <>
@@ -53,24 +62,31 @@ function Calendar() {
         </DirectionButton>
         <DayButton>
           <DayText>Mon</DayText>
+          <Date>06.04.</Date>
         </DayButton>
         <DayButton>
           <DayText>Tue</DayText>
+          <Date>06.04.</Date>
         </DayButton>
         <DayButton>
           <DayText>Wed</DayText>
+          <Date>07.04.</Date>
         </DayButton>
         <DayButton>
           <DayText>Thur</DayText>
+          <Date>08.04.</Date>
         </DayButton>
         <DayButton>
           <DayText>Fri</DayText>
+          <Date>09.04.</Date>
         </DayButton>
         <DayButton>
           <DayText>Sat</DayText>
+          <Date>10.04.</Date>
         </DayButton>
         <DayButton>
           <DayText>Sun</DayText>
+          <Date>11.04.</Date>
         </DayButton>
         <DirectionButton>
           <img src={ArrowRight} />

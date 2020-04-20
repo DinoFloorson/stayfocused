@@ -19,7 +19,7 @@ const Heading = styled.input`
   width: 240px;
   height: 38px;
   border: 1px solid #011e62;
-  font-size: 20px;
+  font-size: 1.25rem;
   padding-left: 8px;
   color: #011e62;
   margin-left: 15px;
