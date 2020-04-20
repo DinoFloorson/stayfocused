@@ -9,10 +9,10 @@ const Card = styled.div`
   height: 570px;
   border-radius: 10px 10px 10px 10px;
   border: 3px solid ${colors.cardBorder};
-  color: ${colors.secondaryColor};
+  color: ${colors.primaryColor};
   display: grid;
   grid-template-rows: 10% 8% 8% 8% auto 10%;
-  grid-template-columns: 15% 15% auto 15% 7%;
+  grid-template-columns: 15% 15% auto 20% 15% 7%;
   align-items: center;
 `;
 
@@ -21,7 +21,6 @@ const Heading = styled.input`
   height: 38px;
   font-size: 1.25rem;
   border: 1px solid ${colors.primaryColor};
-  color: ${colors.primaryColor};
   padding-left: 8px;
   margin-left: 15px;
 `;
@@ -29,14 +28,13 @@ const Heading = styled.input`
 const SubHeading = styled.h2`
   font-size: 1.125rem;
   font-weight: 400;
-  color: ${colors.primaryColor};
   grid-column: 1/3;
   align-items: center;
   padding-left: 15px;
 `;
 
 const CategoryWrapper = styled.div`
-  grid-column: 3/5;
+  grid-column: 3/6;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -45,7 +43,6 @@ const CategoryWrapper = styled.div`
 const Date = styled.input`
   width: 130px;
   height: 25px;
-  color: ${colors.primaryColor};
   grid-column: 3/6;
   border: 1px solid ${colors.primaryColor};
   ::-webkit-datetime-edit-fields-wrapper {
@@ -59,14 +56,13 @@ const Date = styled.input`
   }
   ::-webkit-calendar-picker-indicator {
     background: ${colors.primaryColor};
-    color: white;
+    color: ${colors.secondaryColor};
   }
 `;
 
 const StartTime = styled.input`
   width: 80px;
   height: 25px;
-  color: ${colors.primaryColor};
   border: 1px solid ${colors.primaryColor};
   grid-column: 3/4;
   grid-row: 4/5;
@@ -81,9 +77,8 @@ const StartTime = styled.input`
 const EndTime = styled.input`
   width: 80px;
   height: 25px;
-  color: ${colors.primaryColor};
   border: 1px solid ${colors.primaryColor};
-  grid-column: 3/5;
+  grid-column: 3/6;
   grid-row: 4/5;
   justify-self: end;
   ::-webkit-datetime-edit {
@@ -104,7 +99,12 @@ const DiscardButton = styled(MethodButton)`
   grid-row: 6/7;
   justify-self: end;
 `;
-//new column
+
+const TimeElement = styled.p`
+  grid-column: 4/5;
+  grid-row: 4/5;
+`;
+
 function DetailCard() {
   return (
     <>
@@ -123,7 +123,7 @@ function DetailCard() {
         <Date type="date" />
         <SubHeading>Time:</SubHeading>
         <StartTime type="time" />
-        <span>to</span>
+        <TimeElement>to</TimeElement>
         <EndTime type="time" />
         <SaveButton>Save</SaveButton>
         <DiscardButton>Discard</DiscardButton>
