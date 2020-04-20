@@ -1,12 +1,10 @@
 import PrimaryButton from './PrimaryButton';
 import React from 'react';
-import GlobalStyles from './GlobalStyles';
 import styled from '@emotion/styled';
 
 const Button = styled(PrimaryButton)`
-  font-size: 40px;
-  height: 40px;
-  width: 40px;
+  font-size: 2.5rem;
+  padding: 20px 10px 20px 10px;
   border-radius: 20px;
   border: none;
   text-align: center;
@@ -16,7 +14,6 @@ const Button = styled(PrimaryButton)`
 function AddButton() {
   return (
     <>
-      <GlobalStyles />
       <Button>+</Button>
     </>
   );
