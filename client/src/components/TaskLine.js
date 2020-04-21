@@ -13,7 +13,7 @@ const Task = styled.div`
 `;
 
 const Time = styled.p`
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 `;
 
 const Container = styled.div`
@@ -29,7 +29,7 @@ const Container = styled.div`
 `;
 
 const TaskHeading = styled.h2`
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 400;
 `;
 

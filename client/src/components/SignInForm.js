@@ -36,7 +36,7 @@ const Text = styled.p`
 const Input = styled.input`
   width: 230px;
   height: 38px;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: ${colors.primaryColor};
   border: 1px solid ${colors.primaryColor};
   border-radius: 13px;

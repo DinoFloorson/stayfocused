@@ -25,7 +25,7 @@ const Heading = styled.h1`
 `;
 
 const SubHeading = styled.h2`
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   font-weight: 400;
   grid-column: 1/2;
   align-items: center;
@@ -34,7 +34,7 @@ const SubHeading = styled.h2`
 
 const CategoryLabel = styled.p`
   width: 35px;
-  font-size: 0.625rem;
+  font-size: 0.6rem;
   background-color: ${colors.primaryColor};
   color: ${colors.secondaryColor};
   padding: 2px;

@@ -19,14 +19,14 @@ const Card = styled.div`
 const Heading = styled.input`
   width: 240px;
   height: 38px;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   border: 1px solid ${colors.primaryColor};
   padding-left: 8px;
   margin-left: 15px;
 `;
 
 const SubHeading = styled.h2`
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   font-weight: 400;
   grid-column: 1/3;
   align-items: center;

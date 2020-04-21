@@ -24,7 +24,7 @@ const DirectionButton = styled.button`
 `;
 
 const DayText = styled.p`
-  font-size: 0.937rem;
+  font-size: 0.9rem;
   color: ${colors.secondaryColor};
   margin: 0px;
   padding: 3px;
@@ -45,7 +45,7 @@ const DayButton = styled.button`
 `;
 
 const Date = styled.div`
-  font-size: 0.625rem;
+  font-size: 0.65rem;
   margin: 0px;
   padding: 3px;
   color: ${colors.secondaryColor};
