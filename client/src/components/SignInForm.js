@@ -1,14 +1,14 @@
 import styled from '@emotion/styled';
 import PrimaryButton from './PrimaryButton';
 import React from 'react';
-import GlobalStyles from './GlobalStyles';
+import colors from '../utils/colors';
 
 const Form = styled.div`
   width: 305px;
   height: 510px;
   border-radius: 30px 0px 0px 30px;
   background-image: linear-gradient(#011e62, #026adb);
-  color: white;
+  color: ${colors.secondaryColor};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,14 +17,12 @@ const Form = styled.div`
 `;
 
 const Heading = styled.p`
-  font-family: Roboto;
   font-weight: 400;
-  font-size: 25px;
-  color: white;
+  font-size: 1.6rem;
 `;
 
 const InputWrapper = styled.div`
-  font-size: 13px;
+  font-size: 0.8rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -32,19 +30,17 @@ const InputWrapper = styled.div`
 `;
 
 const Text = styled.p`
-  font-family: Roboto;
-  font-size: 13px;
-  color: white;
+  font-size: 0.8rem;
 `;
 
 const Input = styled.input`
   width: 230px;
   height: 38px;
-  border: 1px solid #011e62;
-  font-size: 20px;
-  padding-left: 8px;
-  color: #011e62;
+  font-size: 1.2rem;
+  color: ${colors.primaryColor};
+  border: 1px solid ${colors.primaryColor};
   border-radius: 13px;
+  padding-left: 8px;
 `;
 
 const CheckboxField = styled.div`
@@ -67,7 +63,6 @@ const LetsGoButton = styled(PrimaryButton)`
 function SignInForm() {
   return (
     <>
-      <GlobalStyles />
       <Form>
         <Heading>Welcome back!</Heading>
         <InputWrapper>

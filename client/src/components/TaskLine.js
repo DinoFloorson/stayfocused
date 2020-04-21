@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import GlobalStyles from './GlobalStyles';
 import Dot from '../assets/dot.svg';
 import CategoryButton from './CategoryButton';
+import colors from '../utils/colors';
 
 const Task = styled.div`
   display: flex;
@@ -13,14 +13,14 @@ const Task = styled.div`
 `;
 
 const Time = styled.p`
-  font-size: 15px;
+  font-size: 0.9rem;
 `;
 
 const Container = styled.div`
   width: 188px;
   height: 30px;
   font-size: 15px;
-  border: 3px solid #b9b9b9;
+  border: 3px solid ${colors.cardBorder};
   border-radius: 7px;
   display: flex;
   flex-direction: row;
@@ -29,16 +29,15 @@ const Container = styled.div`
 `;
 
 const TaskHeading = styled.h2`
-  font-size: 15px;
+  font-size: 0.9rem;
   font-weight: 400;
 `;
 
 function TaskLine() {
   return (
     <>
-      <GlobalStyles />
       <Task>
-        <img src={Dot} />
+        <img src={Dot} alt="dot" />
         <Time>08:00 - 09:00</Time>
         <Container>
           <TaskHeading>Technic/GA1</TaskHeading>

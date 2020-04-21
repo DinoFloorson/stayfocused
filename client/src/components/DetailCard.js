@@ -1,16 +1,16 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import GlobalStyles from './GlobalStyles';
 import Bin from '../assets/bin.svg';
 import Pen from '../assets/pen.svg';
 import MethodButton from './MethodButton';
+import colors from '../utils/colors';
 
 const Card = styled.div`
   width: 343px;
   height: 570px;
   border-radius: 10px 10px 10px 10px;
-  border: 3px solid #b9b9b9;
-  color: white;
+  border: 3px solid ${colors.cardBorder};
+  color: ${colors.primaryColor};
   display: grid;
   grid-template-rows: 10% 8% 8% 8% auto 10%;
   grid-template-columns: 30% auto 10% 10%;
@@ -18,17 +18,14 @@ const Card = styled.div`
 `;
 
 const Heading = styled.h1`
-  text-align: left;
   font-size: 1.25rem;
-  font-weight: 400;
-  color: #011e62;
   grid-column: 1/3;
+  text-align: left;
   padding-left: 15px;
 `;
 
 const SubHeading = styled.h2`
-  font-size: 1.125rem;
-  color: #011e62;
+  font-size: 1.1rem;
   font-weight: 400;
   grid-column: 1/2;
   align-items: center;
@@ -36,13 +33,12 @@ const SubHeading = styled.h2`
 `;
 
 const CategoryLabel = styled.p`
-  background-color: #011e62;
-  color: white;
-  font-size: 0.625rem;
-  width: 30px;
+  width: 35px;
+  font-size: 0.6rem;
+  background-color: ${colors.primaryColor};
+  color: ${colors.secondaryColor};
   padding: 2px;
-  font-family: Roboto;
-  border: 2px solid #011e62;
+  border: 2px solid ${colors.primaryColor};
   border-radius: 3px;
   text-align: center;
 `;
@@ -51,11 +47,11 @@ const CategoryWrapper = styled.div`
 `;
 
 const Date = styled.p`
-  color: #011e62;
+  color: ${colors.primaryColor};
 `;
 
 const Time = styled.p`
-  color: #011e62;
+  color: ${colors.primaryColor};
 `;
 
 const CloseButton = styled(MethodButton)`
@@ -67,16 +63,14 @@ const CloseButton = styled(MethodButton)`
 function DetailCard() {
   return (
     <>
-      <GlobalStyles />
       <Card>
         <Heading>Technic/GA1</Heading>
-        <img src={Pen} />
-        <img src={Bin} />
+        <img src={Pen} alt="pen" />
+        <img src={Bin} alt="bin" />
         <SubHeading>Category:</SubHeading>
         <CategoryWrapper>
           <CategoryLabel>SWIM</CategoryLabel>
         </CategoryWrapper>
-
         <SubHeading>Date:</SubHeading>
         <Date>06.11.2020</Date>
         <SubHeading>Time:</SubHeading>

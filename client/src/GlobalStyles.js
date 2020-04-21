@@ -5,14 +5,16 @@ function GlobalStyles() {
   return (
     <Global
       styles={css`
-        body {
-          margin: 0;
+        *,
+        *::before,
+        *::after {
           box-sizing: border-box;
-          background: white;
-          height: 100vh;
-          color: #011e62;
-          font-family: Roboto;
+        }
+        body {
           font-size: 16px;
+          font-family: Roboto;
+          height: 100vh;
+          margin: 0;
         }
       `}
     />

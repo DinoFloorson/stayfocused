@@ -2,12 +2,12 @@ import styled from '@emotion/styled';
 import ArrowLeft from '../assets/arrowleft.svg';
 import ArrowRight from '../assets/arrowright.svg';
 import React from 'react';
+import colors from '../utils/colors';
 
-const Form = styled.div`
-  width: 375px;
+const Bar = styled.div`
   height: 50px;
-  background-color: #011e62;
-  color: white;
+  background-color: ${colors.primaryColor};
+  color: ${colors.secondaryColor};
   border-radius: 20px;
   display: flex;
   flex-direction: row;
@@ -16,66 +16,81 @@ const Form = styled.div`
 `;
 
 const DirectionButton = styled.button`
-  background-color: #011e62;
+  background-color: ${colors.primaryColor};
   border: none;
   outline: none;
   height: 20px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 0px 5px 0px 5px;
 `;
 
 const DayText = styled.p`
-  font-family: Roboto;
-  font-size: 15px;
-  color: white;
+  font-size: 0.9rem;
+  color: ${colors.secondaryColor};
+  margin: 0px;
+  padding: 3px;
 `;
 
 const DayButton = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 20px;
+  height: 100%;
   border: none;
-  background-color: #011e62;
+  background-color: ${colors.primaryColor};
   outline: none;
   &:active {
-    background-color: #ffffff41;
+    background-color: ${colors.buttonClick};
     border-radius: 13px;
   }
 `;
 
+const Date = styled.div`
+  font-size: 0.65rem;
+  margin: 0px;
+  padding: 3px;
+  color: ${colors.secondaryColor};
+  font-weight: 200;
+`;
+//map
 function Calendar() {
   return (
     <>
-      <Form>
+      <Bar>
         <DirectionButton>
-          <img src={ArrowLeft} />
+          <img src={ArrowLeft} alt="Arrow left" />
         </DirectionButton>
         <DayButton>
           <DayText>Mon</DayText>
+          <Date>06.04.</Date>
         </DayButton>
         <DayButton>
           <DayText>Tue</DayText>
+          <Date>06.04.</Date>
         </DayButton>
         <DayButton>
           <DayText>Wed</DayText>
+          <Date>07.04.</Date>
         </DayButton>
         <DayButton>
           <DayText>Thur</DayText>
+          <Date>08.04.</Date>
         </DayButton>
         <DayButton>
           <DayText>Fri</DayText>
+          <Date>09.04.</Date>
         </DayButton>
         <DayButton>
           <DayText>Sat</DayText>
+          <Date>10.04.</Date>
         </DayButton>
         <DayButton>
           <DayText>Sun</DayText>
+          <Date>11.04.</Date>
         </DayButton>
         <DirectionButton>
-          <img src={ArrowRight} />
+          <img src={ArrowRight} alt="Arrow right" />
         </DirectionButton>
-      </Form>
+      </Bar>
     </>
   );
 }
