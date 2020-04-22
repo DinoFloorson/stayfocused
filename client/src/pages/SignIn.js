@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Background from '../assets/backgroundSignIn.png';
+import SignInBackground from '../assets/backgroundSignIn.png';
 import Logo from '../assets/logo.svg';
 import Lettering from '../assets/lettering.svg';
 import SignInForm from '../components/SignInForm';
@@ -11,7 +11,7 @@ const Main = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(${Background});
+  background-image: url(${SignInBackground});
   background-size: 100%;
   display: flex;
   flex-direction: column;

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="812" viewBox="0 0 375 812">
+  <defs>
+    <clipPath id="clip-iPhone_X_XS_11_Pro_1">
+      <rect width="375" height="812"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_X_XS_11_Pro_1" data-name="iPhone X/XS/11 Pro – 1" clip-path="url(#clip-iPhone_X_XS_11_Pro_1)">
+    <rect width="375" height="812" fill="#fff"/>
+    <g id="Component_13_26" data-name="Component 13 – 26" transform="translate(-308 93)">
+      <ellipse id="Ellipse_11" data-name="Ellipse 11" cx="493" cy="443.5" rx="493" ry="443.5" fill="#d3f7ff"/>
+      <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="225" cy="403" rx="225" ry="403" transform="translate(452 5)" fill="#a0eeff"/>
+    </g>
+  </g>
+</svg>
