@@ -4,8 +4,8 @@ import React from 'react';
 import colors from '../utils/colors';
 
 const Form = styled.div`
-  width: 305px;
-  height: 510px;
+  width: 80%;
+  height: 70%;
   border-radius: 30px 0px 0px 30px;
   background-image: linear-gradient(#011e62, #026adb);
   color: ${colors.secondaryColor};
@@ -14,6 +14,7 @@ const Form = styled.div`
   align-items: center;
   justify-content: center;
   box-shadow: 0px 10px 30px #000000;
+  margin: 0px;
 `;
 
 const Heading = styled.p`
@@ -34,7 +35,7 @@ const Text = styled.p`
 `;
 
 const Input = styled.input`
-  width: 230px;
+  width: 100%;
   height: 38px;
   font-size: 1.2rem;
   color: ${colors.primaryColor};
