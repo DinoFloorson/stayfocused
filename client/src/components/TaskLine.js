@@ -5,22 +5,26 @@ import CategoryButton from './CategoryButton';
 import colors from '../utils/colors';
 
 const Task = styled.div`
+  width: 85%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 5px 15px 5px 10px;
+  margin: 5px 15px 5px 20px;
 `;
 
 const Time = styled.p`
   font-size: 0.9rem;
+  width: 40%;
+  margin-left: 10px;
+  color: ${colors.primaryColor};
 `;
 
 const Container = styled.div`
-  width: 188px;
-  height: 30px;
+  width: 60%;
   font-size: 15px;
   border: 3px solid ${colors.cardBorder};
+  background-color: ${colors.secondaryColor};
   border-radius: 7px;
   display: flex;
   flex-direction: row;
@@ -31,6 +35,7 @@ const Container = styled.div`
 const TaskHeading = styled.h2`
   font-size: 0.9rem;
   font-weight: 400;
+  margin: 2px 0px 2px 0px;
 `;
 
 function TaskLine() {

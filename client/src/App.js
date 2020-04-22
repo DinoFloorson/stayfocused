@@ -12,8 +12,10 @@ function App() {
       <Router>
         <Route exact path="/">
           <SignIn />
-        </Route>{' '}
-        <Route exact path="/home"></Route> <Home />
+        </Route>
+        <Route exact path="/home">
+          <Home />
+        </Route>
       </Router>
     </>
   );

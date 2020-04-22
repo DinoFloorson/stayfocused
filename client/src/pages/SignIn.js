@@ -17,6 +17,7 @@ const Main = styled.div`
   flex-direction: column;
   align-items: flex-end;
 `;
+
 const Header = styled.div`
   display: flex;
   flex-direction: row;
@@ -29,6 +30,7 @@ const SignIn = styled(SignInForm)`
   height: 70%;
   margin: 0px;
 `;
+
 function Home() {
   return (
     <>
