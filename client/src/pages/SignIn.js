@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Background from '../assets/backgroundSignIn.png';
 import Logo from '../assets/logo.svg';
 import Lettering from '../assets/lettering.svg';
+import SignInForm from '../components/SignInForm';
 
 const Main = styled.div`
   width: 100%;
@@ -12,22 +13,31 @@ const Main = styled.div`
   left: 0;
   background-image: url(${Background});
   background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 `;
 const Header = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 15%;
-  margin: 5px 0px 0px 0px;
+  height: 20%;
+  align-self: center;
+`;
+
+const SignIn = styled(SignInForm)`
+  height: 70%;
+  margin: 0px;
 `;
 function Home() {
   return (
     <>
       <Main>
         <Header>
-          <img src={Logo} />
-          <img src={Lettering} />
+          <img src={Logo} alt="Logo" />
+          <img src={Lettering} alt="Lettering" />
         </Header>
+        <SignIn />
       </Main>
     </>
   );
