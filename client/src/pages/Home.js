@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 import colors from '../utils/colors';
 import Calendar from '../components/Calendar';
 import TaskLine from '../components/TaskLine';
+import AddButton from '../components/AddButton';
 
 const Main = styled.div`
   width: 100%;
@@ -34,6 +35,14 @@ const Task = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 70%;
+`;
+
+const Footer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 10%;
 `;
 
 function Home() {
@@ -47,7 +56,12 @@ function Home() {
         <Calendar />
         <Task>
           <TaskLine />
+          <TaskLine />
+          <TaskLine />
         </Task>
+        <Footer>
+          <AddButton></AddButton>
+        </Footer>
       </Main>
     </>
   );

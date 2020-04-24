@@ -20,9 +20,10 @@ const Time = styled.p`
   color: ${colors.primaryColor};
 `;
 
-const Container = styled.div`
+const Container = styled.button`
   width: 60%;
   font-size: 15px;
+  outline: none;
   border: 3px solid ${colors.cardBorder};
   background-color: ${colors.secondaryColor};
   border-radius: 7px;
@@ -30,6 +31,10 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  &:active {
+    background-color: ${colors.cardBorder};
+    color: ${colors.secondaryColor};
+  }
 `;
 
 const TaskHeading = styled.h2`
