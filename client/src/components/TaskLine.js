@@ -31,6 +31,10 @@ const Container = styled.button`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  &:active {
+    background-color: ${colors.cardBorder};
+    color: ${colors.secondaryColor};
+  }
 `;
 
 const TaskHeading = styled.h2`
