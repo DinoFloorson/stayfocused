@@ -60,13 +60,25 @@ const CloseButton = styled(MethodButton)`
   justify-self: center;
 `;
 
+const Button = styled.button`
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  background: none;
+  outline: none;
+`;
+
 function DetailCard() {
   return (
     <>
       <Card>
         <Heading>Technic/GA1</Heading>
-        <img src={Pen} alt="pen" />
-        <img src={Bin} alt="bin" />
+        <Button>
+          <img src={Pen} alt="pen" />
+        </Button>
+        <Button>
+          <img src={Bin} alt="bin" />
+        </Button>
         <SubHeading>Category:</SubHeading>
         <CategoryWrapper>
           <CategoryLabel>SWIM</CategoryLabel>
