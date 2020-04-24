@@ -8,6 +8,7 @@ const Button = styled(PrimaryButton)`
   width: 40px;
   border-radius: 20px;
   border: none;
+  margin: 15px;
   position: relative;
   & > img {
     position: absolute;
