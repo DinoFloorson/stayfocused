@@ -1,5 +1,5 @@
 {
-  "authorization": [
+  "users": [
     {
       "email": "jubo93@web.de",
       "password": "1234",
@@ -10,7 +10,7 @@
           "start-time": "08:00",
           "end-time": "09:00",
           "category": "Swim",
-          "heading": "Technic/GA1"
+          "heading": "Technic"
         },
         {
           "id": 1,
@@ -21,7 +21,7 @@
           "heading": "Cardio"
         },
         {
-          "id": 0,
+          "id": 2,
           "date": "24.04.2020",
           "start-time": "10:00",
           "end-time": "11:00",
@@ -29,6 +29,14 @@
           "heading": "Intervall"
         }
       ]
+    },
+    {
+      "email": "julia.bodensohn@web.de",
+      "password": "5678"
+    },
+    {
+      "email": "julia.bodensohn@icloud.com",
+      "password": "9123"
     }
   ]
 }

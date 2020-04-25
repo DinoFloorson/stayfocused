@@ -11,7 +11,8 @@
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\" \"npm run storybook\"",
     "dev:server": "npm run build && cd .. && npm start",
     "server": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "api": "json-server --watch db.json --port 8080"
   },
   "repository": {
     "type": "git",
