@@ -1,11 +1,12 @@
 {
   "users": [
     {
+      "user-id": "0",
       "email": "jubo93@web.de",
       "password": "1234",
       "tasks": [
         {
-          "id": 0,
+          "id": "0",
           "date": "24.04.2020",
           "start-time": "08:00",
           "end-time": "09:00",
@@ -13,7 +14,7 @@
           "heading": "Technic"
         },
         {
-          "id": 1,
+          "id": "1",
           "date": "24.04.2020",
           "start-time": "09:00",
           "end-time": "10:00",
@@ -21,7 +22,7 @@
           "heading": "Cardio"
         },
         {
-          "id": 2,
+          "id": "2",
           "date": "24.04.2020",
           "start-time": "10:00",
           "end-time": "11:00",
@@ -31,12 +32,16 @@
       ]
     },
     {
+      "user-id": "1",
       "email": "julia.bodensohn@web.de",
-      "password": "5678"
+      "password": "5678",
+      "tasks": []
     },
     {
+      "user-id": "2",
       "email": "julia.bodensohn@icloud.com",
-      "password": "9123"
+      "password": "9123",
+      "tasks": []
     }
   ]
 }
