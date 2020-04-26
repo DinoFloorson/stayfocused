@@ -11,7 +11,8 @@
           "start-time": "08:00",
           "end-time": "09:00",
           "category": "Swim",
-          "heading": "Technic"
+          "heading": "Technic",
+          "completed": true
         },
         {
           "id": "1",
@@ -19,7 +20,8 @@
           "start-time": "09:00",
           "end-time": "10:00",
           "category": "Bike",
-          "heading": "Cardio"
+          "heading": "Cardio",
+          "completed": false
         },
         {
           "id": "2",
@@ -27,7 +29,8 @@
           "start-time": "10:00",
           "end-time": "11:00",
           "category": "Run",
-          "heading": "Intervall"
+          "heading": "Intervall",
+          "completed": false
         }
       ]
     },
