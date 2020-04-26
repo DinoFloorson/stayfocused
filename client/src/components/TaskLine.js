@@ -20,7 +20,7 @@ const Time = styled.p`
   color: ${colors.primaryColor};
 `;
 
-const Container = styled.button`
+const Container = styled.div`
   width: 60%;
   font-size: 15px;
   outline: none;
@@ -31,16 +31,16 @@ const Container = styled.button`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+`;
+
+const TaskHeading = styled.button`
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 2px 0px 2px 0px;
   &:active {
     background-color: ${colors.cardBorder};
     color: ${colors.secondaryColor};
   }
-`;
-
-const TaskHeading = styled.h2`
-  font-size: 0.9rem;
-  font-weight: 400;
-  margin: 2px 0px 2px 0px;
 `;
 
 function TaskLine() {
