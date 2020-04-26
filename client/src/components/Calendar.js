@@ -24,6 +24,9 @@ const DirectionButton = styled.button`
   outline: none;
   height: 20px;
   margin: 2px;
+  &:active {
+    background-color: ${colors.buttonClick};
+  }
 `;
 
 const DayText = styled.p`
@@ -55,7 +58,17 @@ const Date = styled.div`
   color: ${colors.secondaryColor};
   font-weight: 200;
 `;
-//map
+
+const days = [
+  { id: 1, day: 'Mon', date: '27.04' },
+  { id: 2, day: 'Tue', date: '28.04' },
+  { id: 3, day: 'Wen', date: '29.04' },
+  { id: 4, day: 'Thur', date: '30.04' },
+  { id: 5, day: 'Fri', date: '01.05' },
+  { id: 6, day: 'Sat', date: '02.05' },
+  { id: 7, day: 'Sun', date: '03.05' },
+];
+
 function Calendar() {
   return (
     <>
@@ -63,7 +76,15 @@ function Calendar() {
         <DirectionButton>
           <img src={ArrowLeft} alt="Arrow left" />
         </DirectionButton>
-        <DayButton>
+
+        {days.map((day) => (
+          <DayButton key={day.id}>
+            <DayText>{day.day}</DayText>
+            <Date>{day.date}</Date>
+          </DayButton>
+        ))}
+
+        {/* <DayButton>
           <DayText>Mon</DayText>
           <Date>06.04.</Date>
         </DayButton>
@@ -90,7 +111,7 @@ function Calendar() {
         <DayButton>
           <DayText>Sun</DayText>
           <Date>11.04.</Date>
-        </DayButton>
+        </DayButton> */}
         <DirectionButton>
           <img src={ArrowRight} alt="Arrow right" />
         </DirectionButton>
