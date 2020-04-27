@@ -1,50 +1,46 @@
 {
   "users": [
     {
-      "id": "0",
-      "email": "jubo93@web.de",
-      "password": "1234",
-      "tasks": [
-        {
-          "id": "0",
-          "date": "24.04.2020",
-          "start-time": "08:00",
-          "end-time": "09:00",
-          "category": "Swim",
-          "heading": "Technic",
-          "completed": true
-        },
-        {
-          "id": "1",
-          "date": "24.04.2020",
-          "start-time": "09:00",
-          "end-time": "10:00",
-          "category": "Bike",
-          "heading": "Cardio",
-          "completed": false
-        },
-        {
-          "id": "2",
-          "date": "24.04.2020",
-          "start-time": "10:00",
-          "end-time": "11:00",
-          "category": "Run",
-          "heading": "Intervall",
-          "completed": false
-        }
-      ]
-    },
-    {
       "id": "1",
       "email": "julia.bodensohn@web.de",
-      "password": "5678",
-      "tasks": []
+      "password": "5678"
     },
     {
       "id": "2",
       "email": "julia.bodensohn@icloud.com",
-      "password": "9123",
-      "tasks": []
+      "password": "9123"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "date": "24.04.2020",
+      "start-time": "08:00",
+      "end-time": "09:00",
+      "category": "Swim",
+      "heading": "Technic",
+      "completed": true,
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "date": "24.04.2020",
+      "start-time": "09:00",
+      "end-time": "10:00",
+      "category": "Bike",
+      "heading": "GA1",
+      "completed": false,
+      "userId": "1"
+    },
+    {
+      "id": "3",
+      "date": "24.04.2020",
+      "start-time": "10:00",
+      "end-time": "11:00",
+      "category": "Run",
+      "heading": "Intervall",
+      "completed": false,
+      "userId": "2"
     }
   ]
 }
