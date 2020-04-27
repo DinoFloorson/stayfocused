@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "user-id": "0",
+      "id": "0",
       "email": "jubo93@web.de",
       "password": "1234",
       "tasks": [
@@ -35,13 +35,13 @@
       ]
     },
     {
-      "user-id": "1",
+      "id": "1",
       "email": "julia.bodensohn@web.de",
       "password": "5678",
       "tasks": []
     },
     {
-      "user-id": "2",
+      "id": "2",
       "email": "julia.bodensohn@icloud.com",
       "password": "9123",
       "tasks": []
