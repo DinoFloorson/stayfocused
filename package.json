@@ -11,7 +11,8 @@
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\" \"npm run storybook\"",
     "dev:server": "npm run build && cd .. && npm start",
     "server": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "api": "json-server --watch db.json --port 8080"
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "json-server": "^0.16.1",
     "mongodb": "^3.5.5"
   }
 }
