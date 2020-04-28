@@ -4,7 +4,7 @@ import smallLogo from '../assets/smallLogo.svg';
 import styled from '@emotion/styled';
 import colors from '../utils/colors';
 import Calendar from '../components/Calendar';
-import TaskLine from '../components/TaskLine';
+import TasksOverview from '../components/TasksOverview';
 import AddButton from '../components/AddButton';
 
 const Main = styled.div`
@@ -31,13 +31,6 @@ const Heading = styled.h1`
   color: ${colors.primaryColor};
 `;
 
-const TasksOverview = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 70%;
-`;
-
 const Footer = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -54,9 +47,7 @@ function Home() {
           <img src={smallLogo} alt="small Logo" />
         </Header>
         <Calendar />
-        <TasksOverview>
-          <TaskLine heading={''} category={''} startTime={''} endTime={''} />
-        </TasksOverview>
+        <TasksOverview />
         <Footer>
           <AddButton></AddButton>
         </Footer>
