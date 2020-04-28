@@ -31,7 +31,7 @@ const Heading = styled.h1`
   color: ${colors.primaryColor};
 `;
 
-const Task = styled.div`
+const Tasks = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,11 +54,11 @@ function Home() {
           <img src={smallLogo} alt="small Logo" />
         </Header>
         <Calendar />
-        <Task>
+        <Tasks>
           <TaskLine />
           <TaskLine />
           <TaskLine />
-        </Task>
+        </Tasks>
         <Footer>
           <AddButton></AddButton>
         </Footer>
