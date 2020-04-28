@@ -84,34 +84,6 @@ function Calendar() {
           </DayButton>
         ))}
 
-        {/* <DayButton>
-          <DayText>Mon</DayText>
-          <Date>06.04.</Date>
-        </DayButton>
-        <DayButton>
-          <DayText>Tue</DayText>
-          <Date>06.04.</Date>
-        </DayButton>
-        <DayButton>
-          <DayText>Wed</DayText>
-          <Date>07.04.</Date>
-        </DayButton>
-        <DayButton>
-          <DayText>Thur</DayText>
-          <Date>08.04.</Date>
-        </DayButton>
-        <DayButton>
-          <DayText>Fri</DayText>
-          <Date>09.04.</Date>
-        </DayButton>
-        <DayButton>
-          <DayText>Sat</DayText>
-          <Date>10.04.</Date>
-        </DayButton>
-        <DayButton>
-          <DayText>Sun</DayText>
-          <Date>11.04.</Date>
-        </DayButton> */}
         <DirectionButton>
           <img src={ArrowRight} alt="Arrow right" />
         </DirectionButton>
