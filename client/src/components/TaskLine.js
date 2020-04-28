@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Dot from '../assets/dot.svg';
 import CategoryButton from './CategoryButton';
 import colors from '../utils/colors';
+import PropTypes from 'prop-types';
 
 const Task = styled.div`
   width: 85%;
@@ -45,18 +46,28 @@ const TaskHeading = styled.button`
   }
 `;
 
-function TaskLine() {
+function TaskLine({ startTime, endTime, heading, category }) {
   return (
     <>
       <Task>
         <img src={Dot} alt="dot" />
-        <Time>08:00 - 09:00</Time>
+        <Time>
+          {startTime} - {endTime}
+        </Time>
         <Container>
-          <TaskHeading>Technic/GA1</TaskHeading>
-          <CategoryButton>SWIM</CategoryButton>
+          <TaskHeading>{heading}</TaskHeading>
+          <CategoryButton>{category}</CategoryButton>
         </Container>
       </Task>
     </>
   );
 }
+
+TaskLine.propTypes = {
+  startTime: PropTypes.string,
+  endTime: PropTypes.string,
+  heading: PropTypes.string,
+  category: PropTypes.string,
+};
+
 export default TaskLine;

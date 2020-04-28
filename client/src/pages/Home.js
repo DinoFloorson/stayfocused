@@ -31,7 +31,7 @@ const Heading = styled.h1`
   color: ${colors.primaryColor};
 `;
 
-const Tasks = styled.div`
+const TasksOverview = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,11 +54,9 @@ function Home() {
           <img src={smallLogo} alt="small Logo" />
         </Header>
         <Calendar />
-        <Tasks>
-          <TaskLine />
-          <TaskLine />
-          <TaskLine />
-        </Tasks>
+        <TasksOverview>
+          <TaskLine heading={''} category={''} startTime={''} endTime={''} />
+        </TasksOverview>
         <Footer>
           <AddButton></AddButton>
         </Footer>
