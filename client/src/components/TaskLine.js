@@ -37,6 +37,8 @@ const TaskHeading = styled.button`
   font-size: 0.9rem;
   font-weight: 400;
   margin: 2px 0px 2px 0px;
+  outline: none;
+  border: none;
   &:active {
     background-color: ${colors.cardBorder};
     color: ${colors.secondaryColor};
