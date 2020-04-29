@@ -14,9 +14,9 @@
   "tasks": [
     {
       "id": 1,
-      "date": "24.04.2020",
-      "start-time": "08:00",
-      "end-time": "09:00",
+      "date": "27.04.2020",
+      "startTime": "08:00",
+      "endTime": "09:00",
       "category": "Swim",
       "heading": "Technic",
       "completed": true,
@@ -24,9 +24,9 @@
     },
     {
       "id": 2,
-      "date": "24.04.2020",
-      "start-time": "09:00",
-      "end-time": "10:00",
+      "date": "27.04.2020",
+      "startTime": "09:00",
+      "endTime": "10:00",
       "category": "Bike",
       "heading": "GA1",
       "completed": false,
@@ -34,9 +34,19 @@
     },
     {
       "id": 3,
-      "date": "24.04.2020",
-      "start-time": "10:00",
-      "end-time": "11:00",
+      "date": "27.04.2020",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "category": "Run",
+      "heading": "Intervall",
+      "completed": false,
+      "userId": 2
+    },
+    {
+      "id": 4,
+      "date": "27.04.2020",
+      "startTime": "10:00",
+      "endTime": "11:00",
       "category": "Run",
       "heading": "Intervall",
       "completed": false,
