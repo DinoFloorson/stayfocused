@@ -6,6 +6,7 @@ import colors from '../utils/colors';
 import Calendar from '../components/Calendar';
 import TasksOverview from '../components/TasksOverview';
 import AddButton from '../components/AddButton';
+import DetailCard from '../components/DetailCard';
 
 const Main = styled.div`
   width: 100%;
@@ -47,6 +48,7 @@ function Home() {
           <img src={smallLogo} alt="small Logo" />
         </Header>
         <Calendar />
+        <DetailCard />
         <TasksOverview />
         <Footer>
           <AddButton></AddButton>
