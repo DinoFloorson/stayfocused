@@ -34,12 +34,13 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const TaskHeading = styled.button`
+const TaskHeadingDetailsButton = styled.button`
   font-size: 0.9rem;
   font-weight: 400;
   margin: 2px 0px 2px 0px;
   outline: none;
   border: none;
+  background-color: white;
   &:active {
     background-color: ${colors.cardBorder};
     color: ${colors.secondaryColor};
@@ -55,7 +56,7 @@ function TaskLine({ startTime, endTime, heading, category }) {
           {startTime} - {endTime}
         </Time>
         <Container>
-          <TaskHeading>{heading}</TaskHeading>
+          <TaskHeadingDetailsButton>{heading}</TaskHeadingDetailsButton>
           <CategoryButton>{category}</CategoryButton>
         </Container>
       </Task>
