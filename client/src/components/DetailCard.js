@@ -9,6 +9,12 @@ import PropTypes from 'prop-types';
 const Card = styled.div`
   width: 343px;
   height: 570px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   border-radius: 10px 10px 10px 10px;
   border: 3px solid ${colors.cardBorder};
   color: ${colors.primaryColor};
@@ -89,7 +95,7 @@ function DetailCard({ toggleModal }) {
         <Date>06.11.2020</Date>
         <SubHeading>Time:</SubHeading>
         <Time> 08:00 to 09:00</Time>
-        <CloseButton onClick={() => toggleModal()}>Close</CloseButton>
+        <CloseButton onClick={toggleModal}>Close</CloseButton>
       </Card>
     </>
   );

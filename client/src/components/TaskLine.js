@@ -47,7 +47,7 @@ const TaskHeadingDetailsButton = styled.button`
   }
 `;
 
-function TaskLine({ startTime, endTime, heading, category }) {
+function TaskLine({ startTime, endTime, heading, category, toggleModal }) {
   return (
     <>
       <Task>
@@ -56,7 +56,9 @@ function TaskLine({ startTime, endTime, heading, category }) {
           {startTime} - {endTime}
         </Time>
         <Container>
-          <TaskHeadingDetailsButton>{heading}</TaskHeadingDetailsButton>
+          <TaskHeadingDetailsButton onClick={toggleModal}>
+            {heading}
+          </TaskHeadingDetailsButton>
           <CategoryButton>{category}</CategoryButton>
         </Container>
       </Task>
@@ -69,6 +71,7 @@ TaskLine.propTypes = {
   endTime: PropTypes.string,
   heading: PropTypes.string,
   category: PropTypes.string,
+  toggleModal: PropTypes.func,
 };
 
 export default TaskLine;
