@@ -187,26 +187,46 @@ const EditTimeElement = styled.p`
 
 function DetailCard({ toggleModal, task }) {
   const [edit, setEdit] = useState(false);
-  console.log(typeof task.date);
+  const [editHeading, setEditHeading] = useState(task.heading);
+  const [editDate, setEditDate] = useState(task.date);
+  const [editStartTime, setEditStartTime] = useState(task.startTime);
+  const [editEndTime, setEditEndTime] = useState(task.endTime);
+
   if (edit) {
     return (
       <EditCard>
-        <EditHeading type="text" value={task.heading} />
+        <EditHeading
+          type="text"
+          value={editHeading}
+          onChange={(e) => setEditHeading(e.target.value)}
+        />
         <EditSubHeading>Category:</EditSubHeading>
         <EditCategoryWrapper>
-          <CategoryButton>SWIM</CategoryButton>
-          <CategoryButton>BIKE</CategoryButton>
-          <CategoryButton>RUN</CategoryButton>
-          <CategoryButton>STR</CategoryButton>
-          <CategoryButton>STA</CategoryButton>
+          <CategoryButton value="SWIM">SWIM</CategoryButton>
+          <CategoryButton value="BIKE">BIKE</CategoryButton>
+          <CategoryButton value="RUN">RUN</CategoryButton>
+          <CategoryButton value="STR">STR</CategoryButton>
+          <CategoryButton value="STA">STA</CategoryButton>
         </EditCategoryWrapper>
 
         <EditSubHeading>Date:</EditSubHeading>
-        <EditDate type="date" value={task.date} />
+        <EditDate
+          type="date"
+          value={editDate}
+          onChange={(e) => setEditDate(e.target.value)}
+        />
         <EditSubHeading>Time:</EditSubHeading>
-        <EditStartTime type="time" value={task.startTime} />
+        <EditStartTime
+          type="time"
+          value={editStartTime}
+          onChange={(e) => setEditStartTime(e.target.value)}
+        />
         <EditTimeElement>to</EditTimeElement>
-        <EditEndTime type="time" value={task.endTime} />
+        <EditEndTime
+          type="time"
+          value={editEndTime}
+          onChange={(e) => setEditEndTime(e.target.value)}
+        />
         <SaveButton>Save</SaveButton>
         <DiscardButton>Discard</DiscardButton>
       </EditCard>
@@ -241,6 +261,7 @@ function DetailCard({ toggleModal, task }) {
 DetailCard.propTypes = {
   toggleModal: PropTypes.func,
   task: PropTypes.object,
+  newDate: PropTypes.string,
 };
 
 export default DetailCard;
