@@ -9,40 +9,40 @@
   "tasks": [
     {
       "id": 1,
-      "date": "27.04.2020",
+      "date": "2020-04-27",
       "startTime": "08:00",
       "endTime": "09:00",
-      "category": "Swim",
+      "category": "SWIM",
       "heading": "Technic",
       "completed": true,
       "userId": 1
     },
     {
       "id": 2,
-      "date": "27.04.2020",
+      "date": "2020-04-27",
       "startTime": "09:00",
       "endTime": "10:00",
-      "category": "Bike",
+      "category": "BIKE",
       "heading": "GA1",
       "completed": false,
       "userId": 1
     },
     {
       "id": 3,
-      "date": "27.04.2020",
+      "date": "2020-04-27",
       "startTime": "10:00",
       "endTime": "11:00",
-      "category": "Run",
+      "category": "RUN",
       "heading": "Intervall",
       "completed": false,
       "userId": 1
     },
     {
       "id": 4,
-      "date": "27.04.2020",
+      "date": "2020-04-27",
       "startTime": "10:00",
       "endTime": "11:00",
-      "category": "Run",
+      "category": "RUN",
       "heading": "Intervall",
       "completed": false,
       "userId": 1
