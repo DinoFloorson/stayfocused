@@ -14,6 +14,7 @@ const Card = styled.div`
   top: 0;
   bottom: 0;
   margin: auto;
+
   border: 3px solid ${colors.cardBorder};
   color: ${colors.primaryColor};
   display: grid;
@@ -112,7 +113,7 @@ const TimeElement = styled.p`
   grid-row: 4/5;
 `;
 
-function DetailCard() {
+function AddNewTask() {
   return (
     <>
       <Card>
@@ -139,4 +140,4 @@ function DetailCard() {
   );
 }
 
-export default DetailCard;
+export default AddNewTask;
