@@ -76,11 +76,11 @@ const Button = styled.button`
   outline: none;
 `;
 
-function DetailCard({ toggleModal }) {
+function DetailCard({ toggleModal, task }) {
   return (
     <>
       <Card>
-        <Heading>Technic/GA1</Heading>
+        <Heading>{task.heading}</Heading>
         <Button>
           <img src={Pen} alt="pen" />
         </Button>
@@ -89,12 +89,14 @@ function DetailCard({ toggleModal }) {
         </Button>
         <SubHeading>Category:</SubHeading>
         <CategoryWrapper>
-          <CategoryLabel>SWIM</CategoryLabel>
+          <CategoryLabel>{task.category}</CategoryLabel>
         </CategoryWrapper>
         <SubHeading>Date:</SubHeading>
-        <Date>06.11.2020</Date>
+        <Date>{task.date}</Date>
         <SubHeading>Time:</SubHeading>
-        <Time> 08:00 to 09:00</Time>
+        <Time>
+          {task.startTime}-{task.endTime}
+        </Time>
         <CloseButton onClick={toggleModal}>Close</CloseButton>
       </Card>
     </>
@@ -103,6 +105,7 @@ function DetailCard({ toggleModal }) {
 
 DetailCard.propTypes = {
   toggleModal: PropTypes.func,
+  task: PropTypes.object,
 };
 
 export default DetailCard;

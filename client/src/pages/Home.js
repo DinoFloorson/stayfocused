@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HomeBackground from '../assets/homeBackground.svg';
 import smallLogo from '../assets/smallLogo.svg';
 import styled from '@emotion/styled';
@@ -9,7 +9,7 @@ import DetailCard from '../components/DetailCard';
 import useModal from '../hooks/useModal';
 import TaskLine from '../components/TaskLine';
 import { useQuery } from 'react-query';
-import { getAllTasks } from '../api/tasks';
+import { getAllTasks, getTask } from '../api/tasks';
 
 const Main = styled.div`
   width: 100%;
@@ -63,6 +63,14 @@ const TasksOverview = styled.div`
 function Home() {
   const { isShowing, toggleModal } = useModal();
   const { status, data: tasks, error } = useQuery('allTasks', getAllTasks);
+  const [selectedTask, setSelectedTask] = useState({});
+
+  async function handleOnTaskClick(id) {
+    const task = await getTask(id);
+    setSelectedTask(task);
+    toggleModal();
+  }
+
   if (status === 'loading') {
     return <span>Loading...</span>;
   }
@@ -81,7 +89,7 @@ function Home() {
         <Calendar />
         {isShowing ? (
           <Background>
-            <DetailCard toggleModal={toggleModal} />
+            <DetailCard task={selectedTask} toggleModal={toggleModal} />
           </Background>
         ) : null}
         <TasksOverview>
@@ -94,6 +102,7 @@ function Home() {
               id={task.id}
               key={task.id}
               toggleModal={toggleModal}
+              onClick={() => handleOnTaskClick(task.id)}
             />
           ))}
         </TasksOverview>
