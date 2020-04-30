@@ -34,19 +34,20 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const TaskHeading = styled.button`
+const TaskHeadingDetailsButton = styled.button`
   font-size: 0.9rem;
   font-weight: 400;
   margin: 2px 0px 2px 0px;
   outline: none;
   border: none;
+  background-color: white;
   &:active {
     background-color: ${colors.cardBorder};
     color: ${colors.secondaryColor};
   }
 `;
 
-function TaskLine({ startTime, endTime, heading, category }) {
+function TaskLine({ startTime, endTime, heading, category, onClick }) {
   return (
     <>
       <Task>
@@ -55,7 +56,9 @@ function TaskLine({ startTime, endTime, heading, category }) {
           {startTime} - {endTime}
         </Time>
         <Container>
-          <TaskHeading>{heading}</TaskHeading>
+          <TaskHeadingDetailsButton onClick={onClick}>
+            {heading}
+          </TaskHeadingDetailsButton>
           <CategoryButton>{category}</CategoryButton>
         </Container>
       </Task>
@@ -68,6 +71,7 @@ TaskLine.propTypes = {
   endTime: PropTypes.string,
   heading: PropTypes.string,
   category: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default TaskLine;

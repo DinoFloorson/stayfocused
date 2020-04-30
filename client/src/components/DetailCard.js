@@ -4,10 +4,17 @@ import Bin from '../assets/bin.svg';
 import Pen from '../assets/pen.svg';
 import MethodButton from './MethodButton';
 import colors from '../utils/colors';
+import PropTypes from 'prop-types';
 
 const Card = styled.div`
   width: 343px;
   height: 570px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   border-radius: 10px 10px 10px 10px;
   border: 3px solid ${colors.cardBorder};
   color: ${colors.primaryColor};
@@ -15,6 +22,7 @@ const Card = styled.div`
   grid-template-rows: 10% 8% 8% 8% auto 10%;
   grid-template-columns: 30% auto 10% 10%;
   align-items: center;
+  background-color: ${colors.secondaryColor};
 `;
 
 const Heading = styled.h1`
@@ -68,11 +76,11 @@ const Button = styled.button`
   outline: none;
 `;
 
-function DetailCard() {
+function DetailCard({ toggleModal, task }) {
   return (
     <>
       <Card>
-        <Heading>Technic/GA1</Heading>
+        <Heading>{task.heading}</Heading>
         <Button>
           <img src={Pen} alt="pen" />
         </Button>
@@ -81,16 +89,23 @@ function DetailCard() {
         </Button>
         <SubHeading>Category:</SubHeading>
         <CategoryWrapper>
-          <CategoryLabel>SWIM</CategoryLabel>
+          <CategoryLabel>{task.category}</CategoryLabel>
         </CategoryWrapper>
         <SubHeading>Date:</SubHeading>
-        <Date>06.11.2020</Date>
+        <Date>{task.date}</Date>
         <SubHeading>Time:</SubHeading>
-        <Time> 08:00 to 09:00</Time>
-        <CloseButton>Close</CloseButton>
+        <Time>
+          {task.startTime}-{task.endTime}
+        </Time>
+        <CloseButton onClick={toggleModal}>Close</CloseButton>
       </Card>
     </>
   );
 }
+
+DetailCard.propTypes = {
+  toggleModal: PropTypes.func,
+  task: PropTypes.object,
+};
 
 export default DetailCard;

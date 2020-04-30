@@ -4,11 +4,6 @@
       "id": 1,
       "email": "julia.bodensohn@web.de",
       "password": "5678"
-    },
-    {
-      "id": 2,
-      "email": "julia.bodensohn@icloud.com",
-      "password": "9123"
     }
   ],
   "tasks": [
@@ -40,7 +35,7 @@
       "category": "Run",
       "heading": "Intervall",
       "completed": false,
-      "userId": 2
+      "userId": 1
     },
     {
       "id": 4,
@@ -50,7 +45,7 @@
       "category": "Run",
       "heading": "Intervall",
       "completed": false,
-      "userId": 2
+      "userId": 1
     }
   ]
 }
