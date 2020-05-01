@@ -1,12 +1,12 @@
 import React from 'react';
-import InputDetailCard from '../components/InputDetailCard';
+import AddNewTask from '../components/AddNewTask';
 
 export default {
   title: 'Card',
 };
 
-export const NewInputDetailCard = () => (
+export const NewAddNewTask = () => (
   <>
-    <InputDetailCard></InputDetailCard>
+    <AddNewTask></AddNewTask>
   </>
 );
