@@ -8,8 +8,8 @@
     "client": "cd client && npm start",
     "build": "cd client && npm run build && npm run build-storybook",
     "storybook": "cd client && npm run storybook",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\" ",
-    "dev:server": "npm run build && cd .. && npm start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\" \"npm run storybook",
+    "dev-server": "npm run build && cd .. && npm start",
     "server": "nodemon server.js",
     "start": "node server.js",
     "api": "json-server --watch db.json --port 8080"
