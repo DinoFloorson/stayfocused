@@ -261,7 +261,6 @@ function DetailCard({ toggleModal, task }) {
 DetailCard.propTypes = {
   toggleModal: PropTypes.func,
   task: PropTypes.object,
-  newDate: PropTypes.string,
 };
 
 export default DetailCard;
