@@ -3,8 +3,10 @@ import colors from '../utils/colors';
 
 const SecondaryButton = styled.button`
   font-size: 0.6rem;
-  background-color: ${colors.secondaryColor};
-  color: ${colors.primaryColor};
+  background-color: ${(props) =>
+    props.active ? colors.primaryColor : colors.secondaryColor};
+  color: ${(props) =>
+    props.active ? colors.secondaryColor : colors.primaryColor};
   border: 2px solid ${colors.primaryColor};
   text-align: center;
   padding: 0px;

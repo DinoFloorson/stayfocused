@@ -10,10 +10,10 @@
     {
       "id": 1,
       "date": "2020-04-27",
-      "startTime": "08:00",
-      "endTime": "09:00",
+      "startTime": "15:00",
+      "endTime": "18:00",
       "category": "SWIM",
-      "heading": "Technic",
+      "heading": "New",
       "completed": true,
       "userId": 1
     },

@@ -191,6 +191,12 @@ function DetailCard({ toggleModal, task }) {
   const [editDate, setEditDate] = useState(task.date);
   const [editStartTime, setEditStartTime] = useState(task.startTime);
   const [editEndTime, setEditEndTime] = useState(task.endTime);
+  const [activeCategory, setActiveCategory] = useState(task.category);
+  const categories = ['SWIM', 'BIKE', 'RUN', 'STR', 'STA'];
+
+  function onHandleClick(category) {
+    setActiveCategory(category);
+  }
 
   if (edit) {
     return (
@@ -202,11 +208,15 @@ function DetailCard({ toggleModal, task }) {
         />
         <EditSubHeading>Category:</EditSubHeading>
         <EditCategoryWrapper>
-          <CategoryButton value="SWIM">SWIM</CategoryButton>
-          <CategoryButton value="BIKE">BIKE</CategoryButton>
-          <CategoryButton value="RUN">RUN</CategoryButton>
-          <CategoryButton value="STR">STR</CategoryButton>
-          <CategoryButton value="STA">STA</CategoryButton>
+          {categories.map((category) => (
+            <CategoryButton
+              key={category}
+              onClick={() => onHandleClick(category)}
+              active={activeCategory === category}
+            >
+              {category}
+            </CategoryButton>
+          ))}
         </EditCategoryWrapper>
 
         <EditSubHeading>Date:</EditSubHeading>
@@ -228,7 +238,7 @@ function DetailCard({ toggleModal, task }) {
           onChange={(e) => setEditEndTime(e.target.value)}
         />
         <SaveButton>Save</SaveButton>
-        <DiscardButton>Discard</DiscardButton>
+        <DiscardButton onClick={toggleModal}>Discard</DiscardButton>
       </EditCard>
     );
   }
