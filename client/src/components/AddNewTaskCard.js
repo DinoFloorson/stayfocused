@@ -113,7 +113,7 @@ const TimeElement = styled.p`
   grid-row: 4/5;
 `;
 
-function AddNewTask() {
+function AddNewTaskCard() {
   return (
     <>
       <Card>
@@ -140,4 +140,4 @@ function AddNewTask() {
   );
 }
 
-export default AddNewTask;
+export default AddNewTaskCard;

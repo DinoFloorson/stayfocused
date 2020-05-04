@@ -18,12 +18,12 @@ export async function getAllTasks() {
   return tasks;
 }
 
-// export async function editTask(taskId) {
-//   const response = await fetch(`/tasks/${taskId}`, { method: 'GET' });
-//   if (!response.ok) {
-//     throw new Error(response.statusText);
-//   }
-//   const task = await response.json();
+export async function editTask(taskId) {
+  const response = await fetch(`/tasks/${taskId}`, { method: 'PATCH' });
+  if (!response.ok) {
+    throw new Error(response.statusText);
+  }
+  const task = await response.json();
 
-//   return task;
-// }
+  return task;
+}
