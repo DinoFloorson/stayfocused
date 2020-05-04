@@ -8,12 +8,20 @@ const Card = styled.div`
   width: 343px;
   height: 570px;
   border-radius: 10px 10px 10px 10px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
   border: 3px solid ${colors.cardBorder};
   color: ${colors.primaryColor};
   display: grid;
   grid-template-rows: 10% 8% 8% 8% auto 10%;
   grid-template-columns: 15% 15% auto 20% 15% 7%;
   align-items: center;
+  background-color: ${colors.secondaryColor};
 `;
 
 const Heading = styled.input`
@@ -105,7 +113,7 @@ const TimeElement = styled.p`
   grid-row: 4/5;
 `;
 
-function DetailCard() {
+function AddNewTask() {
   return (
     <>
       <Card>
@@ -132,4 +140,4 @@ function DetailCard() {
   );
 }
 
-export default DetailCard;
+export default AddNewTask;
