@@ -36,3 +36,12 @@ export async function patchTask(
   const task = await response.json();
   return task;
 }
+export async function deleteTask(taskId) {
+  const response = await fetch(`/tasks/${taskId}`, { method: 'DELETE' });
+  if (!response.ok) {
+    throw new Error(response.statusText);
+  }
+  const task = await response.json();
+
+  return task;
+}

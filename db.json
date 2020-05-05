@@ -26,16 +26,6 @@
       "heading": "GA1",
       "completed": false,
       "userId": 1
-    },
-    {
-      "id": 3,
-      "date": "2020-04-27",
-      "startTime": "10:30",
-      "endTime": "11:30",
-      "category": "RUN",
-      "heading": "Intervall 3*400m",
-      "completed": false,
-      "userId": 1
     }
   ]
 }
