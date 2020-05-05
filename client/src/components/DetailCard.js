@@ -258,14 +258,7 @@ function DetailCard({ toggleModal, task }) {
   }
 
   async function deleteChoosenTask() {
-    await deleteTask(
-      task.id,
-      editDate,
-      editStartTime,
-      editEndTime,
-      activeCategory,
-      editHeading
-    );
+    await deleteTask(task.id);
     toggleModal();
   }
 
