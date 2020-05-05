@@ -14,16 +14,25 @@ export async function getAllTasks() {
     throw new Error(response.statusText);
   }
   const tasks = await response.json();
-
   return tasks;
 }
 
-// export async function editTask(taskId) {
-//   const response = await fetch(`/tasks/${taskId}`, { method: 'GET' });
-//   if (!response.ok) {
-//     throw new Error(response.statusText);
-//   }
-//   const task = await response.json();
+export async function patchTask(
+  taskId,
+  date,
+  startTime,
+  endTime,
+  category,
+  heading
+) {
+  const response = await fetch(`/tasks/${taskId}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ date, startTime, endTime, category, heading }),
+  });
 
-//   return task;
-// }
+  const task = await response.json();
+  return task;
+}
