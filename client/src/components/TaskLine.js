@@ -30,8 +30,9 @@ const Container = styled.div`
   border-radius: 7px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding-right: 10px;
 `;
 
 const TaskHeadingDetailsButton = styled.button`
