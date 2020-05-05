@@ -6,7 +6,7 @@ import MethodButton from './MethodButton';
 import colors from '../utils/colors';
 import PropTypes from 'prop-types';
 import CategoryButton from './CategoryButton';
-import { patchTask } from '../api/tasks';
+import { patchTask, deleteTask } from '../api/tasks';
 
 const Card = styled.div`
   width: 343px;
@@ -256,6 +256,12 @@ function DetailCard({ toggleModal, task }) {
       </EditCard>
     );
   }
+
+  async function deleteChoosenTask() {
+    await deleteTask(task.id);
+    toggleModal();
+  }
+
   return (
     <>
       <Card>
@@ -263,7 +269,7 @@ function DetailCard({ toggleModal, task }) {
         <Button onClick={() => setEdit(true)}>
           <img src={Pen} alt="pen" />
         </Button>
-        <Button>
+        <Button onClick={deleteChoosenTask}>
           <img src={Bin} alt="bin" />
         </Button>
         <SubHeading>Category:</SubHeading>
