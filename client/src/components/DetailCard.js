@@ -9,7 +9,6 @@ import CategoryButton from './CategoryButton';
 import { useMutation, queryCache } from 'react-query';
 import { patchTask, deleteTask } from '../api/tasks';
 
-
 const Card = styled.div`
   width: 343px;
   height: 570px;

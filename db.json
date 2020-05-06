@@ -36,16 +36,6 @@
       "heading": "GA1",
       "completed": false,
       "userId": 1
-    },
-    {
-      "date": "2020-05-07",
-      "startTime": "12:34",
-      "endTime": "23:05",
-      "category": "RUN",
-      "heading": "Intervall",
-      "completed": false,
-      "userId": "1",
-      "id": 4
     }
   ]
 }
