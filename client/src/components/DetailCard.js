@@ -6,6 +6,7 @@ import MethodButton from './MethodButton';
 import colors from '../utils/colors';
 import PropTypes from 'prop-types';
 import CategoryButton from './CategoryButton';
+import { useMutation, queryCache } from 'react-query';
 import { patchTask, deleteTask } from '../api/tasks';
 
 const Card = styled.div`
@@ -193,6 +194,10 @@ function DetailCard({ toggleModal, task }) {
   const [editStartTime, setEditStartTime] = useState(task.startTime);
   const [editEndTime, setEditEndTime] = useState(task.endTime);
   const [activeCategory, setActiveCategory] = useState(task.category);
+  const [mutate, { status, error }] = useMutation(patchTask, {
+    onSuccess: () => queryCache.refetchQueries('allTasks'),
+  });
+  const taskId = task.id;
 
   const categories = ['SWIM', 'BIKE', 'RUN', 'STR', 'STA'];
 
@@ -201,15 +206,25 @@ function DetailCard({ toggleModal, task }) {
   }
 
   async function saveEditedTask() {
-    await patchTask(
-      task.id,
-      editDate,
-      editStartTime,
-      editEndTime,
-      activeCategory,
-      editHeading
-    );
+    const fields = {
+      date: editDate,
+      startTime: editStartTime,
+      endTime: editEndTime,
+      category: activeCategory,
+      heading: editHeading,
+    };
+    await mutate({
+      taskId,
+      fields,
+    });
     toggleModal();
+  }
+  if (status === 'loading') {
+    return <span>Loading...</span>;
+  }
+
+  if (status === 'error') {
+    return <span>Error: {error.message}</span>;
   }
 
   if (edit) {
