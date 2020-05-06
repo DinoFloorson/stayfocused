@@ -29,3 +29,19 @@ export async function patchTask({ taskId, fields }) {
   const task = await response.json();
   return task;
 }
+
+export async function addTask({ fields }) {
+  const response = await fetch(`/tasks/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(fields),
+  });
+  if (!response.ok) {
+    throw new Error(response.statusText);
+  }
+  const task = await response.json();
+
+  return task;
+}

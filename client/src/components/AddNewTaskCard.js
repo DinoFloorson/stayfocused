@@ -1,9 +1,11 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import React, { useState } from 'react';
 import MethodButton from './MethodButton';
 import CategoryButton from './CategoryButton';
 import colors from '../utils/colors';
 import PropTypes from 'prop-types';
+import { useMutation, queryCache } from 'react-query';
+import { addTask } from '../api/tasks';
 
 const Card = styled.div`
   width: 343px;
@@ -115,26 +117,84 @@ const TimeElement = styled.p`
 `;
 
 function AddNewTaskCard({ toggleAddTask }) {
+  const [newHeading, setNewHeading] = useState();
+  const [newDate, setNewDate] = useState();
+  const [newStartTime, setNewStartTime] = useState();
+  const [newEndTime, setNewEndTime] = useState();
+  const [activeCategory, setActiveCategory] = useState();
+  const [mutate, { status, error }] = useMutation(addTask, {
+    onSuccess: () => queryCache.refetchQueries('allTasks'),
+  });
+
+  const categories = ['SWIM', 'BIKE', 'RUN', 'STR', 'STA'];
+
+  async function saveEditedTask() {
+    const fields = {
+      date: newDate,
+      startTime: newStartTime,
+      endTime: newEndTime,
+      category: activeCategory,
+      heading: newHeading,
+      completed: false,
+      userId: '1',
+    };
+    await mutate({
+      fields,
+    });
+    toggleAddTask();
+  }
+  if (status === 'loading') {
+    return <span>Loading...</span>;
+  }
+
+  if (status === 'error') {
+    return <span>Error: {error.message}</span>;
+  }
+
+  function onHandleClick(category) {
+    setActiveCategory(category);
+  }
+
   return (
     <>
       <Card>
-        <Heading type="text" />
+        <Heading
+          type="text"
+          value={newHeading}
+          onChange={(e) => setNewHeading(e.target.value)}
+        />
         <SubHeading>Category:</SubHeading>
         <CategoryWrapper>
-          <CategoryButton>SWIM</CategoryButton>
-          <CategoryButton>BIKE</CategoryButton>
-          <CategoryButton>RUN</CategoryButton>
-          <CategoryButton>STR</CategoryButton>
-          <CategoryButton>STA</CategoryButton>
+          {categories.map((category) => (
+            <CategoryButton
+              key={category}
+              onClick={() => onHandleClick(category)}
+              active={activeCategory === category}
+            >
+              {category}
+            </CategoryButton>
+          ))}
         </CategoryWrapper>
 
         <SubHeading>Date:</SubHeading>
-        <Date type="date" />
+        <Date
+          type="date"
+          value={newDate}
+          onChange={(e) => setNewDate(e.target.value)}
+        />
         <SubHeading>Time:</SubHeading>
-        <StartTime type="time" />
+        <StartTime
+          type="time"
+          value={newStartTime}
+          onChange={(e) => setNewStartTime(e.target.value)}
+        />
         <TimeElement>to</TimeElement>
-        <EndTime type="time" />
-        <SaveButton>Save</SaveButton>
+        <EndTime
+          type="time"
+          value={newEndTime}
+          onChange={(e) => setNewEndTime(e.target.value)}
+        />
+        <SaveButton onClick={saveEditedTask}>Save</SaveButton>
         <DiscardButton onClick={toggleAddTask}>Discard</DiscardButton>
       </Card>
     </>

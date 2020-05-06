@@ -15,12 +15,7 @@
       "category": "SWIM",
       "heading": "Technic",
       "completed": true,
-      "userId": 1,
-      "editDate": "2020-05-24",
-      "editStartTime": "07:00",
-      "editEndTime": "07:30",
-      "activeCategory": "SWIM",
-      "editHeading": "Technic"
+      "userId": 1
     },
     {
       "id": 2,
@@ -41,6 +36,16 @@
       "heading": "Intervall 3*400m",
       "completed": false,
       "userId": 1
+    },
+    {
+      "date": "2020-05-07",
+      "startTime": "12:34",
+      "endTime": "23:05",
+      "category": "RUN",
+      "heading": "Intervall",
+      "completed": false,
+      "userId": "1",
+      "id": 4
     }
   ]
 }
