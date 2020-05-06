@@ -30,6 +30,7 @@ export async function patchTask({ taskId, fields }) {
   return task;
 }
 
+
 export async function addTask({ fields }) {
   const response = await fetch(`/tasks/`, {
     method: 'POST',
@@ -38,6 +39,10 @@ export async function addTask({ fields }) {
     },
     body: JSON.stringify(fields),
   });
+
+export async function deleteTask(taskId) {
+  const response = await fetch(`/tasks/${taskId}`, { method: 'DELETE' });
+
   if (!response.ok) {
     throw new Error(response.statusText);
   }
