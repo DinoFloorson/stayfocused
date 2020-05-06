@@ -12,10 +12,15 @@
       "date": "2020-05-24",
       "startTime": "07:00",
       "endTime": "07:30",
-      "category": "RUN",
-      "heading": "Technic/Ga",
+      "category": "SWIM",
+      "heading": "Technic",
       "completed": true,
-      "userId": 1
+      "userId": 1,
+      "editDate": "2020-05-24",
+      "editStartTime": "07:00",
+      "editEndTime": "07:30",
+      "activeCategory": "SWIM",
+      "editHeading": "Technic"
     },
     {
       "id": 2,

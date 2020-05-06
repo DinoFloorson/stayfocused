@@ -17,20 +17,13 @@ export async function getAllTasks() {
   return tasks;
 }
 
-export async function patchTask(
-  taskId,
-  date,
-  startTime,
-  endTime,
-  category,
-  heading
-) {
+export async function patchTask({ taskId, fields }) {
   const response = await fetch(`/tasks/${taskId}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ date, startTime, endTime, category, heading }),
+    body: JSON.stringify(fields),
   });
 
   const task = await response.json();
