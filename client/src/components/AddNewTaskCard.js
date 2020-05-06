@@ -3,6 +3,7 @@ import React from 'react';
 import MethodButton from './MethodButton';
 import CategoryButton from './CategoryButton';
 import colors from '../utils/colors';
+import PropTypes from 'prop-types';
 
 const Card = styled.div`
   width: 343px;
@@ -113,7 +114,7 @@ const TimeElement = styled.p`
   grid-row: 4/5;
 `;
 
-function AddNewTaskCard() {
+function AddNewTaskCard({ toggleAddTask }) {
   return (
     <>
       <Card>
@@ -134,10 +135,12 @@ function AddNewTaskCard() {
         <TimeElement>to</TimeElement>
         <EndTime type="time" />
         <SaveButton>Save</SaveButton>
-        <DiscardButton>Discard</DiscardButton>
+        <DiscardButton onClick={toggleAddTask}>Discard</DiscardButton>
       </Card>
     </>
   );
 }
-
+AddNewTaskCard.propTypes = {
+  toggleAddTask: PropTypes.func,
+};
 export default AddNewTaskCard;

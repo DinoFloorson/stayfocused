@@ -10,6 +10,7 @@ import useModal from '../hooks/useModal';
 import TaskLine from '../components/TaskLine';
 import { useQuery } from 'react-query';
 import { getAllTasks, getTask } from '../api/tasks';
+import AddNewTaskCard from '../components/AddNewTaskCard';
 
 const Main = styled.div`
   width: 100%;
@@ -61,7 +62,7 @@ const TasksOverview = styled.div`
 `;
 
 function Home() {
-  const { isShowing, toggleModal } = useModal();
+  const { isShowing, toggleModal, toggleAddTask, addTask } = useModal();
   const { status, data: tasks, error } = useQuery('allTasks', getAllTasks);
   const [selectedTask, setSelectedTask] = useState({});
 
@@ -92,6 +93,11 @@ function Home() {
             <DetailCard task={selectedTask} toggleModal={toggleModal} />
           </Background>
         ) : null}
+        {addTask ? (
+          <Background>
+            <AddNewTaskCard toggleAddTask={toggleAddTask} />
+          </Background>
+        ) : null}
         <TasksOverview>
           {tasks.map((task) => (
             <TaskLine
@@ -107,7 +113,7 @@ function Home() {
           ))}
         </TasksOverview>
         <Footer>
-          <AddButton></AddButton>
+          <AddButton onClick={toggleAddTask} />
         </Footer>
       </Main>
     </>

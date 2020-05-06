@@ -2,6 +2,7 @@ import PrimaryButton from './PrimaryButton';
 import React from 'react';
 import styled from '@emotion/styled';
 import Plus from '../assets/plus.svg';
+import PropTypes from 'prop-types';
 
 const Button = styled(PrimaryButton)`
   height: 40px;
@@ -17,13 +18,16 @@ const Button = styled(PrimaryButton)`
   }
 `;
 
-function AddButton() {
+function AddButton({ onClick }) {
   return (
     <>
-      <Button>
+      <Button onClick={onClick}>
         <img src={Plus} alt="plus" />
       </Button>
     </>
   );
 }
+AddButton.propTypes = {
+  onClick: PropTypes.func,
+};
 export default AddButton;
