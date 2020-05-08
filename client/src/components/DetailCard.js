@@ -197,6 +197,9 @@ function DetailCard({ toggleModal, task }) {
   const [mutate, { status, error }] = useMutation(patchTask, {
     onSuccess: () => queryCache.refetchQueries('allTasks'),
   });
+  const [remove] = useMutation(deleteTask, {
+    onSuccess: () => queryCache.refetchQueries('allTasks'),
+  });
   const taskId = task.id;
 
   const categories = ['SWIM', 'BIKE', 'RUN', 'STR', 'STA'];
@@ -273,7 +276,7 @@ function DetailCard({ toggleModal, task }) {
   }
 
   async function deleteChoosenTask() {
-    await deleteTask(task.id);
+    await remove(task.id);
     toggleModal();
   }
 

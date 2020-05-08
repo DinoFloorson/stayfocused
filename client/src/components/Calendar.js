@@ -65,13 +65,13 @@ const Date = styled.div`
 function Calendar() {
   const [activeDay, setActiveDay] = useState(1);
   const days = [
-    { id: 1, day: 'Mon', date: '27.04' },
-    { id: 2, day: 'Tue', date: '28.04' },
-    { id: 3, day: 'Wen', date: '29.04' },
-    { id: 4, day: 'Thur', date: '30.04' },
-    { id: 5, day: 'Fri', date: '01.05' },
-    { id: 6, day: 'Sat', date: '02.05' },
-    { id: 7, day: 'Sun', date: '03.05' },
+    { id: 1, day: 'Mon', date: '11.05' },
+    { id: 2, day: 'Tue', date: '12.05' },
+    { id: 3, day: 'Wen', date: '13.05' },
+    { id: 4, day: 'Thur', date: '14.05' },
+    { id: 5, day: 'Fri', date: '15.05' },
+    { id: 6, day: 'Sat', date: '16.05' },
+    { id: 7, day: 'Sun', date: '17.05' },
   ];
 
   function onHandleClick(day) {

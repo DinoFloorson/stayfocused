@@ -143,9 +143,6 @@ function AddNewTaskCard({ toggleAddTask }) {
     });
     toggleAddTask();
   }
-  if (status === 'loading') {
-    return <span>Loading...</span>;
-  }
 
   if (status === 'error') {
     return <span>Error: {error.message}</span>;
