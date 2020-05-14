@@ -121,7 +121,7 @@ function AddNewTaskCard({ toggleAddTask }) {
   const [newDate, setNewDate] = useState();
   const [newStartTime, setNewStartTime] = useState();
   const [newEndTime, setNewEndTime] = useState();
-  const [activeCategory, setActiveCategory] = useState();
+  const [activeCategory, setActiveCategory] = useState('SWIM');
   const [mutate, { status, error }] = useMutation(addTask, {
     onSuccess: () => queryCache.refetchQueries('allTasks'),
   });
@@ -142,9 +142,6 @@ function AddNewTaskCard({ toggleAddTask }) {
       fields,
     });
     toggleAddTask();
-  }
-  if (status === 'loading') {
-    return <span>Loading...</span>;
   }
 
   if (status === 'error') {

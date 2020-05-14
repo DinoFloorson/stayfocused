@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import Dot from '../assets/dot.svg';
 import CategoryButton from './CategoryButton';
 import colors from '../utils/colors';
 import PropTypes from 'prop-types';
+import { patchTask } from '../api/tasks';
 
 const Task = styled.div`
   width: 85%;
@@ -48,7 +49,27 @@ const TaskHeadingDetailsButton = styled.button`
   }
 `;
 
-function TaskLine({ startTime, endTime, heading, category, onClick }) {
+function TaskLine({
+  startTime,
+  endTime,
+  heading,
+  completed,
+  category,
+  onClick,
+}) {
+  const [isCompleted, setIsCompleted] = useState();
+
+  function onHandleClick(completed) {
+    setIsCompleted(completed);
+    saveEditedTask();
+  }
+
+  async function saveEditedTask() {
+    await patchTask({
+      completed,
+    });
+  }
+
   return (
     <>
       <Task>
@@ -60,7 +81,9 @@ function TaskLine({ startTime, endTime, heading, category, onClick }) {
           <TaskHeadingDetailsButton onClick={onClick}>
             {heading}
           </TaskHeadingDetailsButton>
-          <CategoryButton>{category}</CategoryButton>
+          <CategoryButton onClick={onHandleClick} active={isCompleted}>
+            {category}
+          </CategoryButton>
         </Container>
       </Task>
     </>
@@ -73,6 +96,7 @@ TaskLine.propTypes = {
   heading: PropTypes.string,
   category: PropTypes.string,
   onClick: PropTypes.func,
+  completed: PropTypes.bool,
 };
 
 export default TaskLine;

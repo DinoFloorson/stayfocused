@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import PrimaryButton from './PrimaryButton';
 import React from 'react';
 import colors from '../utils/colors';
+import { useHistory } from 'react-router-dom';
 
 const Form = styled.div`
   width: 80%;
@@ -62,6 +63,10 @@ const LetsGoButton = styled(PrimaryButton)`
 `;
 
 function SignInForm() {
+  const history = useHistory();
+  function handleSubmit() {
+    history.push('/home');
+  }
   return (
     <>
       <Form>
@@ -78,7 +83,7 @@ function SignInForm() {
           <input type="checkbox" />
           <Text>Remain signed in</Text>
         </CheckboxField>
-        <LetsGoButton>Lets go!</LetsGoButton>
+        <LetsGoButton onClick={handleSubmit}>Lets go!</LetsGoButton>
       </Form>
     </>
   );

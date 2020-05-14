@@ -9,31 +9,21 @@
   "tasks": [
     {
       "id": 1,
-      "date": "2020-05-24",
-      "startTime": "07:00",
-      "endTime": "07:30",
-      "category": "SWIM",
-      "heading": "Technic",
+      "date": "2020-05-27",
+      "startTime": "06:00",
+      "endTime": "06:30",
+      "category": "BIKE",
+      "heading": "Technic/GA1",
       "completed": true,
       "userId": 1
     },
     {
       "id": 2,
-      "date": "2020-04-27",
-      "startTime": "09:00",
-      "endTime": "10:00",
+      "date": "2020-05-11",
+      "startTime": "09:30",
+      "endTime": "10:30",
       "category": "BIKE",
-      "heading": "GA1",
-      "completed": false,
-      "userId": 1
-    },
-    {
-      "id": 3,
-      "date": "2020-04-27",
-      "startTime": "09:00",
-      "endTime": "10:00",
-      "category": "BIKE",
-      "heading": "GA1",
+      "heading": "Intervall/Ga1",
       "completed": false,
       "userId": 1
     }

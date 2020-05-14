@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import ArrowLeft from '../assets/arrowleft.svg';
 import ArrowRight from '../assets/arrowright.svg';
-import React from 'react';
+import React, { useState } from 'react';
 import colors from '../utils/colors';
 
 const Bar = styled.div`
@@ -43,8 +43,11 @@ const DayButton = styled.button`
   height: 100%;
   border: none;
   padding: 2px;
-  background-color: ${colors.primaryColor};
   outline: none;
+  background-color: ${(props) =>
+    props.active ? colors.buttonClick : colors.primaryColor};
+  border-radius: ${(props) => (props.active ? '13px' : null)};
+
   &:active {
     background-color: ${colors.buttonClick};
     border-radius: 13px;
@@ -59,17 +62,21 @@ const Date = styled.div`
   font-weight: 200;
 `;
 
-const days = [
-  { id: 1, day: 'Mon', date: '27.04' },
-  { id: 2, day: 'Tue', date: '28.04' },
-  { id: 3, day: 'Wen', date: '29.04' },
-  { id: 4, day: 'Thur', date: '30.04' },
-  { id: 5, day: 'Fri', date: '01.05' },
-  { id: 6, day: 'Sat', date: '02.05' },
-  { id: 7, day: 'Sun', date: '03.05' },
-];
-
 function Calendar() {
+  const [activeDay, setActiveDay] = useState(1);
+  const days = [
+    { id: 1, day: 'Mon', date: '11.05' },
+    { id: 2, day: 'Tue', date: '12.05' },
+    { id: 3, day: 'Wen', date: '13.05' },
+    { id: 4, day: 'Thur', date: '14.05' },
+    { id: 5, day: 'Fri', date: '15.05' },
+    { id: 6, day: 'Sat', date: '16.05' },
+    { id: 7, day: 'Sun', date: '17.05' },
+  ];
+
+  function onHandleClick(day) {
+    setActiveDay(day);
+  }
   return (
     <>
       <Bar>
@@ -78,7 +85,11 @@ function Calendar() {
         </DirectionButton>
 
         {days.map((day) => (
-          <DayButton key={day.id}>
+          <DayButton
+            key={day.id}
+            onClick={() => onHandleClick(day.id)}
+            active={activeDay === day.id}
+          >
             <DayText>{day.day}</DayText>
             <Date>{day.date}</Date>
           </DayButton>

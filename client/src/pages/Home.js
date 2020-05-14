@@ -105,6 +105,7 @@ function Home() {
               category={task.category}
               startTime={task.startTime}
               endTime={task.endTime}
+              completed={task.completed}
               id={task.id}
               key={task.id}
               toggleModal={toggleModal}
