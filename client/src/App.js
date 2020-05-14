@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import GlobalStyles from '../src/GlobalStyles';
 import SignIn from '../src/pages/SignIn';
@@ -10,12 +10,14 @@ function App() {
     <>
       <GlobalStyles />
       <Router>
-        <Route exact path="/">
-          <SignIn />
-        </Route>
-        <Route exact path="/home">
-          <Home />
-        </Route>
+        <Switch>
+          <Route exact path="/">
+            <SignIn />
+          </Route>
+          <Route exact path="/home">
+            <Home />
+          </Route>
+        </Switch>
       </Router>
     </>
   );
