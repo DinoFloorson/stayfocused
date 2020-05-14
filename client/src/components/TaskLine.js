@@ -97,7 +97,6 @@ TaskLine.propTypes = {
   category: PropTypes.string,
   onClick: PropTypes.func,
   completed: PropTypes.bool,
-  taskId: PropTypes.number,
 };
 
 export default TaskLine;
